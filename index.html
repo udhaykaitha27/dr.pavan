@@ -46,6 +46,31 @@
             background-color: #f8fafc;
             background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%230f172a' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
         }
+
+        /* Video section custom scrollbar */
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: #f1f5f9;
+            border-radius: 10px;
+        }
+
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 10px;
+        }
+
+        .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+            background: #94a3b8;
+        }
+
+        /* Active video button highlight */
+        .video-btn-active {
+            border-color: #2563eb !important;
+            background-color: #eff6ff !important;
+        }
     </style>
 </head>
 
@@ -69,10 +94,12 @@
                     <a href="#about" class="text-slate-600 hover:text-blue-600 font-medium transition-colors">About</a>
                     <a href="#services"
                         class="text-slate-600 hover:text-blue-600 font-medium transition-colors">Expertise</a>
+                    <a href="#videos"
+                        class="text-slate-600 hover:text-blue-600 font-medium transition-colors">Videos</a>
                     <a href="#mentorship"
                         class="text-slate-600 hover:text-blue-600 font-medium transition-colors">Mentorship</a>
                     <a href="#location"
-                        class="text-slate-600 hover:text-blue-600 font-medium transition-colors">location</a>
+                        class="text-slate-600 hover:text-blue-600 font-medium transition-colors">Location</a>
                     <a href="#contact"
                         class="bg-blue-600 text-white px-5 py-2.5 rounded-full font-medium hover:bg-blue-700 transition-colors shadow-lg shadow-blue-600/20">Book
                         Appointment</a>
@@ -93,10 +120,12 @@
                     class="block px-3 py-3 text-base font-medium text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-md">About</a>
                 <a href="#services" onclick="toggleMobileMenu()"
                     class="block px-3 py-3 text-base font-medium text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-md">Expertise</a>
+                <a href="#videos" onclick="toggleMobileMenu()"
+                    class="block px-3 py-3 text-base font-medium text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-md">Videos</a>
                 <a href="#mentorship" onclick="toggleMobileMenu()"
                     class="block px-3 py-3 text-base font-medium text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-md">Mentorship</a>
                 <a href="#location" onclick="toggleMobileMenu()"
-                    class="block px-3 py-3 text-base font-medium text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-md">location</a>
+                    class="block px-3 py-3 text-base font-medium text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-md">Location</a>
                 <a href="#contact" onclick="toggleMobileMenu()"
                     class="block px-3 py-3 text-base font-medium text-blue-600 font-semibold bg-blue-50 rounded-md mt-2">Book
                     Appointment</a>
@@ -108,7 +137,6 @@
     <section id="home" class="relative pt-32 pb-20 lg:pt-40 lg:pb-28 overflow-hidden">
         <!-- Background Image with Overlay -->
         <div class="absolute inset-0 z-0">
-            <!-- CHANGE THE LINE BELOW -->
             <img src="photos/pavan-kumar.jpg" alt="Dr. Pavan Kumar Ediga" class="w-full h-full object-cover opacity-40">
             <div class="absolute inset-0 bg-gradient-to-r from-white via-white/95 to-white/20"></div>
         </div>
@@ -136,7 +164,7 @@
                         </a>
                         <a href="#location"
                             class="inline-flex items-center justify-center px-8 py-3.5 border border-slate-300 text-base font-medium rounded-lg text-slate-700 bg-white/80 hover:bg-white hover:text-blue-600 transition-all backdrop-blur-sm">
-                            View Clinic location
+                            View Clinic Location
                         </a>
                     </div>
                     <div
@@ -157,14 +185,10 @@
                 </div>
                 <div class="lg:col-span-5 mt-12 lg:mt-0 relative">
                     <div class="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-white">
-                        <!-- Doctor's Portrait Image -->
                         <div
                             class="bg-slate-200 aspect-[4/5] flex items-center justify-center relative overflow-hidden group">
-
-                            <!-- REPLACE THE SRC BELOW WITH YOUR IMAGE -->
                             <img src="photos/pavan-kumar.jpg" alt="Dr. Pavan Kumar Ediga"
                                 class="absolute inset-0 w-full h-full object-cover">
-
                             <div class="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent z-10"></div>
                             <div class="absolute bottom-6 left-6 z-20 text-white">
                                 <p class="text-2xl font-bold font-serif">Dr. Pavan Kumar Ediga</p>
@@ -173,11 +197,8 @@
                         </div>
                     </div>
                     <!-- Decorative Elements -->
-                    <div class="absolute -top-6 -right-6 h-24 w-24 bg-blue-100 rounded-full blur-2xl -z-10 opacity-60">
-                    </div>
-                    <div
-                        class="absolute -bottom-6 -left-6 h-32 w-32 bg-teal-100 rounded-full blur-2xl -z-10 opacity-60">
-                    </div>
+                    <div class="absolute -top-6 -right-6 h-24 w-24 bg-blue-100 rounded-full blur-2xl -z-10 opacity-60"></div>
+                    <div class="absolute -bottom-6 -left-6 h-32 w-32 bg-teal-100 rounded-full blur-2xl -z-10 opacity-60"></div>
                 </div>
             </div>
         </div>
@@ -187,7 +208,6 @@
     <section class="bg-slate-50 py-12 border-b border-slate-200">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-                <!-- Stat 1 -->
                 <div class="flex flex-col items-center justify-center p-4">
                     <div class="mb-4 text-slate-400">
                         <i data-lucide="user-check" class="h-8 w-8"></i>
@@ -195,8 +215,6 @@
                     <div class="text-4xl font-bold text-slate-900 mb-1">7+</div>
                     <div class="text-slate-500 text-sm font-medium uppercase tracking-wider">Experience</div>
                 </div>
-
-                <!-- Stat 2 -->
                 <div class="flex flex-col items-center justify-center p-4">
                     <div class="mb-4 text-slate-400">
                         <i data-lucide="activity" class="h-8 w-8"></i>
@@ -204,18 +222,13 @@
                     <div class="text-4xl font-bold text-slate-900 mb-1">1,200+</div>
                     <div class="text-slate-500 text-sm font-medium uppercase tracking-wider">Surgeries</div>
                 </div>
-
-                <!-- Stat 3 -->
                 <div class="flex flex-col items-center justify-center p-4">
                     <div class="mb-4 text-slate-400">
                         <i data-lucide="bot" class="h-8 w-8"></i>
                     </div>
                     <div class="text-4xl font-bold text-slate-900 mb-1">200+</div>
-                    <div class="text-slate-500 text-sm font-medium uppercase tracking-wider">Minimal invasive surgeries
-                    </div>
+                    <div class="text-slate-500 text-sm font-medium uppercase tracking-wider">Minimal Invasive Surgeries</div>
                 </div>
-
-                <!-- Stat 4 -->
                 <div class="flex flex-col items-center justify-center p-4">
                     <div class="mb-4 text-slate-400">
                         <i data-lucide="smile" class="h-8 w-8"></i>
@@ -287,8 +300,7 @@
 
                 <!-- Card 3 -->
                 <div class="bg-slate-50 p-8 rounded-2xl border border-slate-100 hover:shadow-lg transition-shadow">
-                    <div
-                        class="w-12 h-12 bg-indigo-100 rounded-xl flex items-center justify-center text-indigo-600 mb-6">
+                    <div class="w-12 h-12 bg-indigo-100 rounded-xl flex items-center justify-center text-indigo-600 mb-6">
                         <i data-lucide="stethoscope" class="h-6 w-6"></i>
                     </div>
                     <h3 class="text-xl font-bold text-slate-900 mb-3">Professional Experience</h3>
@@ -297,9 +309,6 @@
                             <i data-lucide="check" class="h-4 w-4 text-green-500 mt-0.5"></i>
                             <span>Consultant Neurosurgeon at <strong>Continental Hospitals</strong>, Gachibowli</span>
                         </li>
-
-
-
                         <li class="flex items-start gap-2">
                             <i data-lucide="check" class="h-4 w-4 text-green-500 mt-0.5"></i>
                             <span>Former Assistant Professor in <strong>NIMS, Hyderabad</strong></span>
@@ -333,8 +342,7 @@
                         </div>
                     </div>
                     <div class="md:col-span-8">
-                        <h4
-                            class="font-bold text-slate-900 text-sm uppercase tracking-wider mb-4 border-b border-slate-200 pb-2">
+                        <h4 class="font-bold text-slate-900 text-sm uppercase tracking-wider mb-4 border-b border-slate-200 pb-2">
                             Conference Participation</h4>
                         <div class="grid sm:grid-cols-3 gap-4">
                             <div class="bg-white p-4 rounded-lg border border-slate-200">
@@ -356,8 +364,7 @@
         </div>
     </section>
 
-    
-    <!-- NEW: Certificates Section -->
+    <!-- Certificates Section -->
     <section id="certificates" class="py-20 bg-slate-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
@@ -367,14 +374,10 @@
             </div>
 
             <div class="grid md:grid-cols-2 gap-10">
-                <!-- Certificate 1: Spine Surgery Masterclass -->
+                <!-- Certificate 1 -->
                 <div class="certificate-card group bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden hover:shadow-xl transition-all duration-300">
                     <div class="relative aspect-[4/3] bg-slate-100 flex items-center justify-center overflow-hidden">
-                        <!-- Path matches standard artifact structure, update as needed for production -->
                         <img src="photos/certificate1.png" alt="Spine Surgery Masterclass 2023" class="w-full h-full object-contain p-4 transition-transform duration-500 group-hover:scale-105">
-                        <div class="cert-overlay absolute inset-0 bg-blue-900/10 opacity-0 transition-opacity flex items-center justify-center">
-                            <i data-lucide="zoom-in" class="text-white h-10 w-10 drop-shadow-md"></i>
-                        </div>
                     </div>
                     <div class="p-6">
                         <div class="flex justify-between items-start mb-4">
@@ -392,13 +395,10 @@
                     </div>
                 </div>
 
-                <!-- Certificate 2: Indonesian Neurospine Society -->
+                <!-- Certificate 2 -->
                 <div class="certificate-card group bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden hover:shadow-xl transition-all duration-300">
                     <div class="relative aspect-[4/3] bg-slate-100 flex items-center justify-center overflow-hidden">
                         <img src="photos/certificate2.jpeg" alt="Indonesian Neurospine Society 2023" class="w-full h-full object-contain p-4 transition-transform duration-500 group-hover:scale-105">
-                        <div class="cert-overlay absolute inset-0 bg-blue-900/10 opacity-0 transition-opacity flex items-center justify-center">
-                            <i data-lucide="zoom-in" class="text-white h-10 w-10 drop-shadow-md"></i>
-                        </div>
                     </div>
                     <div class="p-6">
                         <div class="flex justify-between items-start mb-4">
@@ -417,7 +417,6 @@
                 </div>
             </div>
             
-            <!-- Accreditation Footer Note -->
             <div class="mt-12 text-center">
                 <div class="inline-flex items-center gap-2 bg-white px-4 py-2 rounded-full border border-slate-200 shadow-sm text-xs font-bold text-slate-500 uppercase tracking-widest">
                     <i data-lucide="shield-check" class="h-4 w-4 text-green-500"></i>
@@ -427,7 +426,7 @@
         </div>
     </section>
 
-    <!-- NEW: Gallery Section -->
+    <!-- Gallery Section -->
     <section id="gallery" class="py-20 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
@@ -438,186 +437,72 @@
             </div>
 
             <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-
-                 <div class="gallery-item group relative aspect-square bg-slate-100 rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300">
-                    <img src="photos/WhatsApp Image 2026-02-06 at 10.22.36 PM.jpeg" alt="Comprehensive Spinal View" class="w-full h-full object-cover">
-                    <div class="gallery-overlay absolute inset-0 bg-slate-900/60 opacity-0 transition-opacity flex flex-col items-center justify-center p-4 text-center">
-                        <span class="text-white text-xs font-bold uppercase tracking-widest mb-1">Review</span>
-                        <p class="text-white/80 text-[10px]">Comparative Views</p>
-                    </div>
-                </div>
-
-                 <div class="gallery-item group relative aspect-square bg-slate-100 rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300">
-                    <img src="photos/WhatsApp Image 2026-02-06 at 10.22.37 PM (1).jpeg" alt="Comprehensive Spinal View" class="w-full h-full object-cover">
-                    <div class="gallery-overlay absolute inset-0 bg-slate-900/60 opacity-0 transition-opacity flex flex-col items-center justify-center p-4 text-center">
-                        <span class="text-white text-xs font-bold uppercase tracking-widest mb-1">Review</span>
-                        <p class="text-white/80 text-[10px]">Comparative Views</p>
-                    </div>
-                </div>
-
-                 <div class="gallery-item group relative aspect-square bg-slate-100 rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300">
-                    <img src="photos/WhatsApp Image 2026-02-06 at 10.22.37 PM.jpeg" alt="Comprehensive Spinal View" class="w-full h-full object-cover">
-                    <div class="gallery-overlay absolute inset-0 bg-slate-900/60 opacity-0 transition-opacity flex flex-col items-center justify-center p-4 text-center">
-                        <span class="text-white text-xs font-bold uppercase tracking-widest mb-1">Review</span>
-                        <p class="text-white/80 text-[10px]">Comparative Views</p>
-                    </div>
-                </div>
-
-                 <div class="gallery-item group relative aspect-square bg-slate-100 rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300">
-                    <img src="photos/WhatsApp Image 2026-02-06 at 10.22.38 PM.jpeg" alt="Comprehensive Spinal View" class="w-full h-full object-cover">
-                    <div class="gallery-overlay absolute inset-0 bg-slate-900/60 opacity-0 transition-opacity flex flex-col items-center justify-center p-4 text-center">
-                        <span class="text-white text-xs font-bold uppercase tracking-widest mb-1">Review</span>
-                        <p class="text-white/80 text-[10px]">Comparative Views</p>
-                    </div>
-                </div>
-
-                 <div class="gallery-item group relative aspect-square bg-slate-100 rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300">
-                    <img src="photos/WhatsApp Image 2026-02-06 at 10.22.39 PM (1).jpeg" alt="Comprehensive Spinal View" class="w-full h-full object-cover">
-                    <div class="gallery-overlay absolute inset-0 bg-slate-900/60 opacity-0 transition-opacity flex flex-col items-center justify-center p-4 text-center">
-                        <span class="text-white text-xs font-bold uppercase tracking-widest mb-1">Review</span>
-                        <p class="text-white/80 text-[10px]">Comparative Views</p>
-                    </div>
-                </div>
-
-                <!-- 1: Excised Specimen -->
                 <div class="gallery-item group relative aspect-square bg-slate-100 rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300">
-                    <img src="photos/WhatsApp Image 2026-02-06 at 10.27.27 PM (1).jpeg" alt="Excised Tumor Specimen" class="w-full h-full object-cover">
-                    <div class="gallery-overlay absolute inset-0 bg-slate-900/60 opacity-0 transition-opacity flex flex-col items-center justify-center p-4 text-center">
-                        <span class="text-white text-xs font-bold uppercase tracking-widest mb-1">Oncology</span>
-                        <p class="text-white/80 text-[10px]">Excised Specimen</p>
+                    <img src="photos/WhatsApp Image 2026-02-06 at 10.22.36 PM.jpeg" alt="Comparative Views" class="w-full h-full object-cover">
+                    <div class="gallery-overlay absolute inset-0 bg-slate-900/60 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col items-center justify-center p-4 text-center">
+                        <span class="text-white text-xs font-bold uppercase tracking-widest mb-1">Review</span>
+                        <p class="text-white/80 text-[10px]">Comparative Views</p>
                     </div>
                 </div>
-                <!-- 2: Intra-op Microscopic -->
                 <div class="gallery-item group relative aspect-square bg-slate-100 rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300">
-                    <img src="photos/WhatsApp Image 2026-02-06 at 10.27.27 PM.jpeg" alt="Intra-operative Microscopic View" class="w-full h-full object-cover">
-                    <div class="gallery-overlay absolute inset-0 bg-slate-900/60 opacity-0 transition-opacity flex flex-col items-center justify-center p-4 text-center">
-                        <span class="text-white text-xs font-bold uppercase tracking-widest mb-1">Intra-op</span>
-                        <p class="text-white/80 text-[10px]">Microscopic Resection</p>
+                    <img src="photos/WhatsApp Image 2026-02-06 at 10.22.37 PM (1).jpeg" alt="Comparative Views" class="w-full h-full object-cover">
+                    <div class="gallery-overlay absolute inset-0 bg-slate-900/60 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col items-center justify-center p-4 text-center">
+                        <span class="text-white text-xs font-bold uppercase tracking-widest mb-1">Review</span>
+                        <p class="text-white/80 text-[10px]">Comparative Views</p>
                     </div>
                 </div>
-                <!-- 5: Spinal Exposure -->
                 <div class="gallery-item group relative aspect-square bg-slate-100 rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300">
-                    <img src="photos/WhatsApp Image 2026-02-06 at 10.27.29 PM (1).jpeg" alt="Spinal Cord Exposure" class="w-full h-full object-cover">
-                    <div class="gallery-overlay absolute inset-0 bg-slate-900/60 opacity-0 transition-opacity flex flex-col items-center justify-center p-4 text-center">
-                        <span class="text-white text-xs font-bold uppercase tracking-widest mb-1">Spine</span>
-                        <p class="text-white/80 text-[10px]">Decompression Site</p>
+                    <img src="photos/WhatsApp Image 2026-02-06 at 10.22.37 PM.jpeg" alt="Comparative Views" class="w-full h-full object-cover">
+                    <div class="gallery-overlay absolute inset-0 bg-slate-900/60 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col items-center justify-center p-4 text-center">
+                        <span class="text-white text-xs font-bold uppercase tracking-widest mb-1">Review</span>
+                        <p class="text-white/80 text-[10px]">Comparative Views</p>
                     </div>
                 </div>
-                <!-- 6: X-ray Guidance -->
-                <div class="gallery-item group relative aspect-square bg-slate-100 rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300">
-                    <img src="photos/WhatsApp Image 2026-02-06 at 10.27.29 PM.jpeg" alt="Imaging Verification" class="w-full h-full object-cover">
-                    <div class="gallery-overlay absolute inset-0 bg-slate-900/60 opacity-0 transition-opacity flex flex-col items-center justify-center p-4 text-center">
-                        <span class="text-white text-xs font-bold uppercase tracking-widest mb-1">Imaging</span>
-                        <p class="text-white/80 text-[10px]">Hardware Verification</p>
-                    </div>
-                </div>
-                <!-- 7: Spine AP X-ray -->
                 <div class="gallery-item group relative aspect-square bg-slate-100 rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300">
                     <img src="photos/WhatsApp Image 2026-02-06 at 10.27.30 PM (1).jpeg" alt="Post-op Spine AP View" class="w-full h-full object-cover">
-                    <div class="gallery-overlay absolute inset-0 bg-slate-900/60 opacity-0 transition-opacity flex flex-col items-center justify-center p-4 text-center">
+                    <div class="gallery-overlay absolute inset-0 bg-slate-900/60 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col items-center justify-center p-4 text-center">
                         <span class="text-white text-xs font-bold uppercase tracking-widest mb-1">Post-op</span>
                         <p class="text-white/80 text-[10px]">Lumbar Fixation AP</p>
                     </div>
                 </div>
-                <!-- 8: Spine Lat X-ray -->
                 <div class="gallery-item group relative aspect-square bg-slate-100 rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300">
-                    <img src="photos/WhatsApp Image 2026-02-06 at 10.27.30 PM.jpeg" alt="Post-op Spine Lat View" class="w-full h-full object-cover">
-                    <div class="gallery-overlay absolute inset-0 bg-slate-900/60 opacity-0 transition-opacity flex flex-col items-center justify-center p-4 text-center">
-                        <span class="text-white text-xs font-bold uppercase tracking-widest mb-1">Post-op</span>
-                        <p class="text-white/80 text-[10px]">Lumbar Fixation Lat</p>
+                    <img src="photos/15.jpeg" alt="Comparative Views" class="w-full h-full object-cover">
+                    <div class="gallery-overlay absolute inset-0 bg-slate-900/60 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col items-center justify-center p-4 text-center">
+                        <span class="text-white text-xs font-bold uppercase tracking-widest mb-1">Review</span>
+                        <p class="text-white/80 text-[10px]">Comparative Views</p>
                     </div>
                 </div>
-                <!-- 9: Cervical/Dorsal X-ray -->
                 <div class="gallery-item group relative aspect-square bg-slate-100 rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300">
-                    <img src="photos/WhatsApp Image 2026-02-06 at 10.27.31 PM (1).jpeg" alt="Spinal Hardware Imaging" class="w-full h-full object-cover">
-                    <div class="gallery-overlay absolute inset-0 bg-slate-900/60 opacity-0 transition-opacity flex flex-col items-center justify-center p-4 text-center">
-                        <span class="text-white text-xs font-bold uppercase tracking-widest mb-1">Imaging</span>
-                        <p class="text-white/80 text-[10px]">Segmental Stability</p>
+                    <img src="photos/16.jpeg" alt="Comparative Views" class="w-full h-full object-cover">
+                    <div class="gallery-overlay absolute inset-0 bg-slate-900/60 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col items-center justify-center p-4 text-center">
+                        <span class="text-white text-xs font-bold uppercase tracking-widest mb-1">Review</span>
+                        <p class="text-white/80 text-[10px]">Comparative Views</p>
                     </div>
                 </div>
-                <!-- 10: Multi-view X-ray -->
                 <div class="gallery-item group relative aspect-square bg-slate-100 rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300">
-                    <img src="photos/WhatsApp Image 2026-02-06 at 10.27.31 PM (2).jpeg" alt="Comprehensive Spinal View" class="w-full h-full object-cover">
-                    <div class="gallery-overlay absolute inset-0 bg-slate-900/60 opacity-0 transition-opacity flex flex-col items-center justify-center p-4 text-center">
+                    <img src="photos/17.jpeg" alt="Comparative Views" class="w-full h-full object-cover">
+                    <div class="gallery-overlay absolute inset-0 bg-slate-900/60 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col items-center justify-center p-4 text-center">
                         <span class="text-white text-xs font-bold uppercase tracking-widest mb-1">Review</span>
                         <p class="text-white/80 text-[10px]">Comparative Views</p>
                     </div>
                 </div>
-                 <div class="gallery-item group relative aspect-square bg-slate-100 rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300">
-                    <img src="photos/14.jpeg" alt="Comprehensive Spinal View" class="w-full h-full object-cover">
-                    <div class="gallery-overlay absolute inset-0 bg-slate-900/60 opacity-0 transition-opacity flex flex-col items-center justify-center p-4 text-center">
+                <div class="gallery-item group relative aspect-square bg-slate-100 rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300">
+                    <img src="photos/18.jpeg" alt="Comparative Views" class="w-full h-full object-cover">
+                    <div class="gallery-overlay absolute inset-0 bg-slate-900/60 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col items-center justify-center p-4 text-center">
                         <span class="text-white text-xs font-bold uppercase tracking-widest mb-1">Review</span>
                         <p class="text-white/80 text-[10px]">Comparative Views</p>
                     </div>
                 </div>
-
-                 <div class="gallery-item group relative aspect-square bg-slate-100 rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300">
-                    <img src="photos/15.jpeg" alt="Comprehensive Spinal View" class="w-full h-full object-cover">
-                    <div class="gallery-overlay absolute inset-0 bg-slate-900/60 opacity-0 transition-opacity flex flex-col items-center justify-center p-4 text-center">
+                <div class="gallery-item group relative aspect-square bg-slate-100 rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300">
+                    <img src="photos/19.jpeg" alt="Comparative Views" class="w-full h-full object-cover">
+                    <div class="gallery-overlay absolute inset-0 bg-slate-900/60 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col items-center justify-center p-4 text-center">
                         <span class="text-white text-xs font-bold uppercase tracking-widest mb-1">Review</span>
                         <p class="text-white/80 text-[10px]">Comparative Views</p>
                     </div>
                 </div>
-
-                 <div class="gallery-item group relative aspect-square bg-slate-100 rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300">
-                    <img src="photos/16.jpeg" alt="Comprehensive Spinal View" class="w-full h-full object-cover">
-                    <div class="gallery-overlay absolute inset-0 bg-slate-900/60 opacity-0 transition-opacity flex flex-col items-center justify-center p-4 text-center">
-                        <span class="text-white text-xs font-bold uppercase tracking-widest mb-1">Review</span>
-                        <p class="text-white/80 text-[10px]">Comparative Views</p>
-                    </div>
-                </div>
-
-                 <div class="gallery-item group relative aspect-square bg-slate-100 rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300">
-                    <img src="photos/17.jpeg" alt="Comprehensive Spinal View" class="w-full h-full object-cover">
-                    <div class="gallery-overlay absolute inset-0 bg-slate-900/60 opacity-0 transition-opacity flex flex-col items-center justify-center p-4 text-center">
-                        <span class="text-white text-xs font-bold uppercase tracking-widest mb-1">Review</span>
-                        <p class="text-white/80 text-[10px]">Comparative Views</p>
-                    </div>
-                </div>
-
-                 <div class="gallery-item group relative aspect-square bg-slate-100 rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300">
-                    <img src="photos/18.jpeg" alt="Comprehensive Spinal View" class="w-full h-full object-cover">
-                    <div class="gallery-overlay absolute inset-0 bg-slate-900/60 opacity-0 transition-opacity flex flex-col items-center justify-center p-4 text-center">
-                        <span class="text-white text-xs font-bold uppercase tracking-widest mb-1">Review</span>
-                        <p class="text-white/80 text-[10px]">Comparative Views</p>
-                    </div>
-                </div>
-
-                 <div class="gallery-item group relative aspect-square bg-slate-100 rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300">
-                    <img src="photos/19.jpeg" alt="Comprehensive Spinal View" class="w-full h-full object-cover">
-                    <div class="gallery-overlay absolute inset-0 bg-slate-900/60 opacity-0 transition-opacity flex flex-col items-center justify-center p-4 text-center">
-                        <span class="text-white text-xs font-bold uppercase tracking-widest mb-1">Review</span>
-                        <p class="text-white/80 text-[10px]">Comparative Views</p>
-                    </div>
-                </div>
-
-                 <div class="gallery-item group relative aspect-square bg-slate-100 rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300">
-                    <img src="photos/20.jpeg" alt="Comprehensive Spinal View" class="w-full h-full object-cover">
-                    <div class="gallery-overlay absolute inset-0 bg-slate-900/60 opacity-0 transition-opacity flex flex-col items-center justify-center p-4 text-center">
-                        <span class="text-white text-xs font-bold uppercase tracking-widest mb-1">Review</span>
-                        <p class="text-white/80 text-[10px]">Comparative Views</p>
-                    </div>
-                </div>
-
-                 <div class="gallery-item group relative aspect-square bg-slate-100 rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300">
-                    <img src="photos/21.jpeg" alt="Comprehensive Spinal View" class="w-full h-full object-cover">
-                    <div class="gallery-overlay absolute inset-0 bg-slate-900/60 opacity-0 transition-opacity flex flex-col items-center justify-center p-4 text-center">
-                        <span class="text-white text-xs font-bold uppercase tracking-widest mb-1">Review</span>
-                        <p class="text-white/80 text-[10px]">Comparative Views</p>
-                    </div>
-                </div>
-
-                 <div class="gallery-item group relative aspect-square bg-slate-100 rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300">
-                    <img src="photos/22.jpeg" alt="Comprehensive Spinal View" class="w-full h-full object-cover">
-                    <div class="gallery-overlay absolute inset-0 bg-slate-900/60 opacity-0 transition-opacity flex flex-col items-center justify-center p-4 text-center">
-                        <span class="text-white text-xs font-bold uppercase tracking-widest mb-1">Review</span>
-                        <p class="text-white/80 text-[10px]">Comparative Views</p>
-                    </div>
-                </div>
-
-                 <div class="gallery-item group relative aspect-square bg-slate-100 rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300">
-                    <img src="photos/23.jpeg" alt="Comprehensive Spinal View" class="w-full h-full object-cover">
-                    <div class="gallery-overlay absolute inset-0 bg-slate-900/60 opacity-0 transition-opacity flex flex-col items-center justify-center p-4 text-center">
+                <div class="gallery-item group relative aspect-square bg-slate-100 rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300">
+                    <img src="photos/20.jpeg" alt="Comparative Views" class="w-full h-full object-cover">
+                    <div class="gallery-overlay absolute inset-0 bg-slate-900/60 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col items-center justify-center p-4 text-center">
                         <span class="text-white text-xs font-bold uppercase tracking-widest mb-1">Review</span>
                         <p class="text-white/80 text-[10px]">Comparative Views</p>
                     </div>
@@ -627,6 +512,152 @@
             <p class="text-center text-slate-400 text-xs mt-10 italic">* Clinical images shared for educational and verification purposes.</p>
         </div>
     </section>
+
+    <!-- ============================================================ -->
+    <!-- VIDEO SHOWCASE SECTION (NEW)                                  -->
+    <!-- ============================================================ -->
+    <section id="videos" class="py-20 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="text-blue-600 font-semibold tracking-wider text-sm uppercase">Video Library</span>
+                <h2 class="text-3xl md:text-4xl font-bold mt-2 mb-4 text-slate-900">Clinical Insights & Patient Success</h2>
+                <p class="text-slate-500 max-w-2xl mx-auto">Watch patient testimonials, procedural overviews, and educational content from Dr. Pavan Kumar Ediga.</p>
+                <div class="h-1 w-20 bg-blue-600 mx-auto rounded-full mt-6"></div>
+            </div>
+
+            <div class="grid lg:grid-cols-3 gap-8 items-start">
+                <!-- Main Player -->
+                <div class="lg:col-span-2">
+                    <div class="bg-black rounded-2xl overflow-hidden shadow-2xl aspect-video relative border-4 border-white">
+                        <iframe id="mainYoutubePlayer"
+                            class="absolute inset-0 w-full h-full"
+                            src="https://www.youtube.com/embed/c9nBqZbZcB0"
+                            title="YouTube video player"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                    <div class="mt-6 p-6 bg-white rounded-xl shadow-sm border border-slate-100">
+                        <div class="flex items-start gap-3">
+                            <div class="h-10 w-10 bg-blue-100 rounded-lg flex items-center justify-center shrink-0 mt-0.5">
+                                <i data-lucide="play-circle" class="h-5 w-5 text-blue-600"></i>
+                            </div>
+                            <div>
+                                <h3 id="videoTitle" class="text-xl font-bold text-slate-900">Patient Success Story</h3>
+                                <p id="videoDesc" class="text-slate-600 text-sm mt-2 leading-relaxed">Detailed walkthrough of a successful neurosurgical intervention and patient recovery.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Playlist Sidebar -->
+                <div class="space-y-3 max-h-[560px] overflow-y-auto pr-1 custom-scrollbar">
+                    <p class="text-xs font-bold text-slate-400 uppercase tracking-widest px-1 mb-4">Up Next</p>
+
+                    <!-- Video 1 -->
+                    <button onclick="changeVideo('c9nBqZbZcB0', 'Patient Success Story', 'Detailed walkthrough of a successful neurosurgical intervention and patient recovery.')"
+                        class="video-playlist-btn w-full flex gap-3 p-3 rounded-xl bg-white border border-slate-200 hover:border-blue-500 hover:bg-blue-50 transition-all text-left group shadow-sm video-btn-active"
+                        id="btn-c9nBqZbZcB0">
+                        <div class="relative w-28 h-16 shrink-0 rounded-lg overflow-hidden">
+                            <img src="https://img.youtube.com/vi/c9nBqZbZcB0/mqdefault.jpg" class="object-cover w-full h-full" alt="Thumbnail">
+                            <div class="absolute inset-0 flex items-center justify-center bg-black/30 group-hover:bg-black/50 transition-colors">
+                                <i data-lucide="play" class="text-white h-5 w-5 drop-shadow"></i>
+                            </div>
+                        </div>
+                        <div class="flex-1 min-w-0">
+                            <h4 class="font-bold text-slate-900 text-[11px] leading-tight line-clamp-2">Patient Success Story</h4>
+                            <span class="text-[9px] text-blue-600 font-bold uppercase mt-1 block">Testimonial</span>
+                        </div>
+                    </button>
+
+                    <!-- Video 2 -->
+                    <button onclick="changeVideo('KG8zTpbvna4', 'Neurological Health Insights', 'Dr. Pavan Kumar provides educational insights into brain health and neurological conditions.')"
+                        class="video-playlist-btn w-full flex gap-3 p-3 rounded-xl bg-white border border-slate-200 hover:border-blue-500 hover:bg-blue-50 transition-all text-left group shadow-sm"
+                        id="btn-KG8zTpbvna4">
+                        <div class="relative w-28 h-16 shrink-0 rounded-lg overflow-hidden">
+                            <img src="https://img.youtube.com/vi/KG8zTpbvna4/mqdefault.jpg" class="object-cover w-full h-full" alt="Thumbnail">
+                            <div class="absolute inset-0 flex items-center justify-center bg-black/30 group-hover:bg-black/50 transition-colors">
+                                <i data-lucide="play" class="text-white h-5 w-5 drop-shadow"></i>
+                            </div>
+                        </div>
+                        <div class="flex-1 min-w-0">
+                            <h4 class="font-bold text-slate-900 text-[11px] leading-tight line-clamp-2">Neurological Care Overview</h4>
+                            <span class="text-[9px] text-teal-600 font-bold uppercase mt-1 block">Education</span>
+                        </div>
+                    </button>
+
+                    <!-- Video 3 -->
+                    <button onclick="changeVideo('HqXLdkCNq20', 'Endoscopic Spine Techniques', 'Understanding the benefits and procedure of minimally invasive keyhole spine surgery.')"
+                        class="video-playlist-btn w-full flex gap-3 p-3 rounded-xl bg-white border border-slate-200 hover:border-blue-500 hover:bg-blue-50 transition-all text-left group shadow-sm"
+                        id="btn-HqXLdkCNq20">
+                        <div class="relative w-28 h-16 shrink-0 rounded-lg overflow-hidden">
+                            <img src="https://img.youtube.com/vi/HqXLdkCNq20/mqdefault.jpg" class="object-cover w-full h-full" alt="Thumbnail">
+                            <div class="absolute inset-0 flex items-center justify-center bg-black/30 group-hover:bg-black/50 transition-colors">
+                                <i data-lucide="play" class="text-white h-5 w-5 drop-shadow"></i>
+                            </div>
+                        </div>
+                        <div class="flex-1 min-w-0">
+                            <h4 class="font-bold text-slate-900 text-[11px] leading-tight line-clamp-2">Spine Surgery Insights</h4>
+                            <span class="text-[9px] text-indigo-600 font-bold uppercase mt-1 block">Procedure</span>
+                        </div>
+                    </button>
+
+                    <!-- Video 4 -->
+                    <button onclick="changeVideo('ShH2xESwcoI', 'Complex Tumor Management', 'Case review of neuro-oncology and surgical removal of brain lesions.')"
+                        class="video-playlist-btn w-full flex gap-3 p-3 rounded-xl bg-white border border-slate-200 hover:border-blue-500 hover:bg-blue-50 transition-all text-left group shadow-sm"
+                        id="btn-ShH2xESwcoI">
+                        <div class="relative w-28 h-16 shrink-0 rounded-lg overflow-hidden">
+                            <img src="https://img.youtube.com/vi/ShH2xESwcoI/mqdefault.jpg" class="object-cover w-full h-full" alt="Thumbnail">
+                            <div class="absolute inset-0 flex items-center justify-center bg-black/30 group-hover:bg-black/50 transition-colors">
+                                <i data-lucide="play" class="text-white h-5 w-5 drop-shadow"></i>
+                            </div>
+                        </div>
+                        <div class="flex-1 min-w-0">
+                            <h4 class="font-bold text-slate-900 text-[11px] leading-tight line-clamp-2">Tumor Resection Case</h4>
+                            <span class="text-[9px] text-red-600 font-bold uppercase mt-1 block">Case Study</span>
+                        </div>
+                    </button>
+
+                    <!-- Video 5 -->
+                    <button onclick="changeVideo('YjI1RfRjbyw', 'Trauma & Emergency Response', 'Rapid intervention protocols for traumatic head and spine injuries.')"
+                        class="video-playlist-btn w-full flex gap-3 p-3 rounded-xl bg-white border border-slate-200 hover:border-blue-500 hover:bg-blue-50 transition-all text-left group shadow-sm"
+                        id="btn-YjI1RfRjbyw">
+                        <div class="relative w-28 h-16 shrink-0 rounded-lg overflow-hidden">
+                            <img src="https://img.youtube.com/vi/YjI1RfRjbyw/mqdefault.jpg" class="object-cover w-full h-full" alt="Thumbnail">
+                            <div class="absolute inset-0 flex items-center justify-center bg-black/30 group-hover:bg-black/50 transition-colors">
+                                <i data-lucide="play" class="text-white h-5 w-5 drop-shadow"></i>
+                            </div>
+                        </div>
+                        <div class="flex-1 min-w-0">
+                            <h4 class="font-bold text-slate-900 text-[11px] leading-tight line-clamp-2">Emergency Intervention</h4>
+                            <span class="text-[9px] text-orange-600 font-bold uppercase mt-1 block">Neuro Trauma</span>
+                        </div>
+                    </button>
+
+                    <!-- Video 6 -->
+                    <button onclick="changeVideo('Z5u4UNP7X5c', 'Rehabilitation & Post-Op Care', 'The importance of follow-up care and rehabilitation in neurosurgical recovery.')"
+                        class="video-playlist-btn w-full flex gap-3 p-3 rounded-xl bg-white border border-slate-200 hover:border-blue-500 hover:bg-blue-50 transition-all text-left group shadow-sm"
+                        id="btn-Z5u4UNP7X5c">
+                        <div class="relative w-28 h-16 shrink-0 rounded-lg overflow-hidden">
+                            <img src="https://img.youtube.com/vi/Z5u4UNP7X5c/mqdefault.jpg" class="object-cover w-full h-full" alt="Thumbnail">
+                            <div class="absolute inset-0 flex items-center justify-center bg-black/30 group-hover:bg-black/50 transition-colors">
+                                <i data-lucide="play" class="text-white h-5 w-5 drop-shadow"></i>
+                            </div>
+                        </div>
+                        <div class="flex-1 min-w-0">
+                            <h4 class="font-bold text-slate-900 text-[11px] leading-tight line-clamp-2">Recovery Journey</h4>
+                            <span class="text-[9px] text-green-600 font-bold uppercase mt-1 block">Rehab</span>
+                        </div>
+                    </button>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ============================================================ -->
+    <!-- END VIDEO SECTION                                             -->
+    <!-- ============================================================ -->
 
     <!-- Mentorship & Awards Section -->
     <section id="mentorship" class="py-20 bg-slate-100">
@@ -638,8 +669,7 @@
             </div>
 
             <!-- Awards Highlight -->
-            <div
-                class="bg-white rounded-2xl p-8 shadow-sm border-l-4 border-yellow-400 mb-12 flex flex-col md:flex-row items-center gap-6">
+            <div class="bg-white rounded-2xl p-8 shadow-sm border-l-4 border-yellow-400 mb-12 flex flex-col md:flex-row items-center gap-6">
                 <div class="bg-yellow-100 p-4 rounded-full text-yellow-600 shrink-0">
                     <i data-lucide="trophy" class="h-8 w-8"></i>
                 </div>
@@ -658,10 +688,8 @@
                         Distinguished Mentors
                     </h3>
                     <div class="space-y-4">
-                        <div
-                            class="bg-white p-6 rounded-xl border border-slate-200 flex items-center gap-4 hover:shadow-md transition-shadow">
-                            <div
-                                class="h-12 w-12 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 font-bold text-lg shrink-0">
+                        <div class="bg-white p-6 rounded-xl border border-slate-200 flex items-center gap-4 hover:shadow-md transition-shadow">
+                            <div class="h-12 w-12 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 font-bold text-lg shrink-0">
                                 DP
                             </div>
                             <div>
@@ -670,67 +698,44 @@
                                 <p class="text-xs text-blue-600 font-medium mt-1">Spine Surgery Mentorship</p>
                             </div>
                         </div>
-                        <div
-                            class="bg-white p-6 rounded-xl border border-slate-200 flex items-center gap-4 hover:shadow-md transition-shadow">
-                            <div
-                                class="h-12 w-12 bg-teal-100 rounded-full flex items-center justify-center text-teal-600 font-bold text-lg shrink-0">
+                        <div class="bg-white p-6 rounded-xl border border-slate-200 flex items-center gap-4 hover:shadow-md transition-shadow">
+                            <div class="h-12 w-12 bg-teal-100 rounded-full flex items-center justify-center text-teal-600 font-bold text-lg shrink-0">
                                 HK
                             </div>
                             <div>
                                 <h4 class="font-bold text-slate-900 text-lg">Dr. Heung Sung Kim</h4>
                                 <p class="text-sm text-slate-500">Renowned Neurosurgeon</p>
-                                <p class="text-xs text-teal-600 font-medium mt-1">Harrison Spinaratus Hospital, South
-                                    Korea</p>
+                                <p class="text-xs text-teal-600 font-medium mt-1">Harrison Spinaratus Hospital, South Korea</p>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Gallery / Moments Placeholder -->
+                <!-- Moments of Excellence -->
                 <div>
                     <h3 class="text-2xl font-bold text-slate-900 mb-6 flex items-center gap-2">
                         <i data-lucide="image" class="h-6 w-6 text-blue-600"></i>
                         Moments of Excellence
                     </h3>
                     <div class="grid grid-cols-2 gap-4">
-                        <!-- Image 1: Certificate -->
                         <div class="group relative aspect-video bg-slate-200 rounded-xl overflow-hidden">
-                            <!-- REPLACE SRC BELOW WITH YOUR IMAGE -->
                             <img src="photos/mentors.jpeg" alt="Receiving Fellowship Certificate"
                                 class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
-
-                            <!-- Gradient Overlay -->
-                            <div
-                                class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent z-10">
-                            </div>
-
-                            <!-- Text on Top -->
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent z-10"></div>
                             <div class="absolute bottom-3 left-3 right-3 z-20">
-                                <p class="text-white text-xs font-medium leading-tight drop-shadow-md">Receiving
-                                    Fellowship Certificate from Dr. Heung Sung Kim</p>
+                                <p class="text-white text-xs font-medium leading-tight drop-shadow-md">Receiving Fellowship Certificate from Dr. Heung Sung Kim</p>
                             </div>
                         </div>
-
-                        <!-- Image 2: Mentors -->
                         <div class="group relative aspect-video bg-slate-200 rounded-xl overflow-hidden">
-                            <!-- REPLACE SRC BELOW WITH YOUR IMAGE -->
                             <img src="photos/donpark.jpeg" alt="Training with Mentors"
                                 class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
-
-                            <!-- Gradient Overlay -->
-                            <div
-                                class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent z-10">
-                            </div>
-
-                            <!-- Text on Top -->
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent z-10"></div>
                             <div class="absolute bottom-3 left-3 right-3 z-20">
-                                <p class="text-white text-xs font-medium leading-tight drop-shadow-md">Training with Dr.
-                                    Don Park</p>
+                                <p class="text-white text-xs font-medium leading-tight drop-shadow-md">Training with Dr. Don Park</p>
                             </div>
                         </div>
                     </div>
-                    <p class="text-xs text-slate-500 mt-4 italic">* International fellowship completion and advanced
-                        training sessions.</p>
+                    <p class="text-xs text-slate-500 mt-4 italic">* International fellowship completion and advanced training sessions.</p>
                 </div>
             </div>
         </div>
@@ -747,11 +752,8 @@
             </div>
 
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Service 1 -->
-                <div
-                    class="bg-slate-800 p-8 rounded-2xl border border-slate-700 hover:border-blue-500 transition-colors group">
-                    <div
-                        class="h-12 w-12 bg-slate-700 rounded-lg flex items-center justify-center mb-6 group-hover:bg-blue-600 transition-colors">
+                <div class="bg-slate-800 p-8 rounded-2xl border border-slate-700 hover:border-blue-500 transition-colors group">
+                    <div class="h-12 w-12 bg-slate-700 rounded-lg flex items-center justify-center mb-6 group-hover:bg-blue-600 transition-colors">
                         <i data-lucide="minimize-2" class="h-6 w-6 text-blue-400 group-hover:text-white"></i>
                     </div>
                     <h3 class="text-xl font-bold mb-3">Minimally Invasive (Endoscopy) Spine Surgery</h3>
@@ -760,12 +762,8 @@
                         incisions, less pain, and faster recovery.
                     </p>
                 </div>
-
-                <!-- Service 2 -->
-                <div
-                    class="bg-slate-800 p-8 rounded-2xl border border-slate-700 hover:border-blue-500 transition-colors group">
-                    <div
-                        class="h-12 w-12 bg-slate-700 rounded-lg flex items-center justify-center mb-6 group-hover:bg-blue-600 transition-colors">
+                <div class="bg-slate-800 p-8 rounded-2xl border border-slate-700 hover:border-blue-500 transition-colors group">
+                    <div class="h-12 w-12 bg-slate-700 rounded-lg flex items-center justify-center mb-6 group-hover:bg-blue-600 transition-colors">
                         <i data-lucide="layers" class="h-6 w-6 text-blue-400 group-hover:text-white"></i>
                     </div>
                     <h3 class="text-xl font-bold mb-3">Neuro Oncology</h3>
@@ -774,12 +772,8 @@
                         gliomas and meningiomas.
                     </p>
                 </div>
-
-                <!-- Service 3 -->
-                <div
-                    class="bg-slate-800 p-8 rounded-2xl border border-slate-700 hover:border-blue-500 transition-colors group">
-                    <div
-                        class="h-12 w-12 bg-slate-700 rounded-lg flex items-center justify-center mb-6 group-hover:bg-blue-600 transition-colors">
+                <div class="bg-slate-800 p-8 rounded-2xl border border-slate-700 hover:border-blue-500 transition-colors group">
+                    <div class="h-12 w-12 bg-slate-700 rounded-lg flex items-center justify-center mb-6 group-hover:bg-blue-600 transition-colors">
                         <i data-lucide="siren" class="h-6 w-6 text-blue-400 group-hover:text-white"></i>
                     </div>
                     <h3 class="text-xl font-bold mb-3">Neuro Trauma</h3>
@@ -788,12 +782,8 @@
                         clots, and spinal cord injuries.
                     </p>
                 </div>
-
-                <!-- Service 4 -->
-                <div
-                    class="bg-slate-800 p-8 rounded-2xl border border-slate-700 hover:border-blue-500 transition-colors group">
-                    <div
-                        class="h-12 w-12 bg-slate-700 rounded-lg flex items-center justify-center mb-6 group-hover:bg-blue-600 transition-colors">
+                <div class="bg-slate-800 p-8 rounded-2xl border border-slate-700 hover:border-blue-500 transition-colors group">
+                    <div class="h-12 w-12 bg-slate-700 rounded-lg flex items-center justify-center mb-6 group-hover:bg-blue-600 transition-colors">
                         <i data-lucide="activity" class="h-6 w-6 text-blue-400 group-hover:text-white"></i>
                     </div>
                     <h3 class="text-xl font-bold mb-3">Treatment for Back Pain</h3>
@@ -802,12 +792,8 @@
                         management and surgical solutions.
                     </p>
                 </div>
-
-                <!-- Service 5 -->
-                <div
-                    class="bg-slate-800 p-8 rounded-2xl border border-slate-700 hover:border-blue-500 transition-colors group">
-                    <div
-                        class="h-12 w-12 bg-slate-700 rounded-lg flex items-center justify-center mb-6 group-hover:bg-blue-600 transition-colors">
+                <div class="bg-slate-800 p-8 rounded-2xl border border-slate-700 hover:border-blue-500 transition-colors group">
+                    <div class="h-12 w-12 bg-slate-700 rounded-lg flex items-center justify-center mb-6 group-hover:bg-blue-600 transition-colors">
                         <i data-lucide="smile" class="h-6 w-6 text-blue-400 group-hover:text-white"></i>
                     </div>
                     <h3 class="text-xl font-bold mb-3">Management of Headache</h3>
@@ -816,12 +802,8 @@
                         migraines, and neuralgias.
                     </p>
                 </div>
-
-                <!-- Service 6 -->
-                <div
-                    class="bg-slate-800 p-8 rounded-2xl border border-slate-700 hover:border-blue-500 transition-colors group">
-                    <div
-                        class="h-12 w-12 bg-slate-700 rounded-lg flex items-center justify-center mb-6 group-hover:bg-blue-600 transition-colors">
+                <div class="bg-slate-800 p-8 rounded-2xl border border-slate-700 hover:border-blue-500 transition-colors group">
+                    <div class="h-12 w-12 bg-slate-700 rounded-lg flex items-center justify-center mb-6 group-hover:bg-blue-600 transition-colors">
                         <i data-lucide="zap" class="h-6 w-6 text-blue-400 group-hover:text-white"></i>
                     </div>
                     <h3 class="text-xl font-bold mb-3">Facial Nerve Preservation</h3>
@@ -834,16 +816,15 @@
         </div>
     </section>
 
-    <!-- location Section -->
+    <!-- Location Section -->
     <section id="location" class="py-20 bg-slate-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
-                <h2 class="text-3xl font-bold text-slate-900 mb-4">Clinic location</h2>
+                <h2 class="text-3xl font-bold text-slate-900 mb-4">Clinic Location</h2>
                 <div class="h-1 w-20 bg-blue-600 mx-auto rounded-full"></div>
             </div>
 
             <div class="grid place-items-center max-w-5xl mx-auto w-full">
-                <!-- Location 1 -->
                 <div class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden w-full max-w-md">
                     <div class="bg-blue-600 p-4 text-white">
                         <h3 class="text-xl font-bold flex items-center gap-2">
@@ -889,10 +870,15 @@
                         <i data-lucide="star" class="h-4 w-4 fill-current"></i>
                         <i data-lucide="star" class="h-4 w-4 fill-current"></i>
                     </div>
-                    <p class="text-slate-600 italic mb-4">"Professional counselling and sterilized equipment. I had an
-                        excellent experience with Dr. E Pavan Kumar. My recovery was speedy thanks to his diagnosis."
-                    </p>
-                    <p class="font-bold text-slate-900">- rakesh madishetty</p>
+                    <p class="text-slate-600 italic mb-4">"Very first Thanks to you Sir Dr. Pavan Kumar.
+
+Thanks for the Team Continental Hospital.
+It's a place where you can confidently leave your worries.
+I'm thankful to the Dr. Pavan Kumar Sir who did my surgery successfully and never let me feel any kind of stress during my stay.
+Really Great.
+Highly Confident and well knowledge.
+Thank you so much for your support and care Sir."</p>
+                    <p class="font-bold text-slate-900">- Subhash Mishra</p>
                 </div>
                 <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100">
                     <div class="flex text-yellow-400 mb-4">
@@ -902,9 +888,12 @@
                         <i data-lucide="star" class="h-4 w-4 fill-current"></i>
                         <i data-lucide="star" class="h-4 w-4 fill-current"></i>
                     </div>
-                    <p class="text-slate-600 italic mb-4">"One of the best Neurosurgeons in the Financial District area.
-                        He explains the problem very clearly and avoids unnecessary surgeries."</p>
-                    <p class="font-bold text-slate-900">- Ramesh K.</p>
+                    <p class="text-slate-600 italic mb-4">"I would like to express my sincere gratitude to Dr. Pavan Kumar Ediga for the excellent treatment and care he provided to my father during his recovery from a brain stroke. His medical expertise, timely intervention, and patient-focused approach made a huge difference in my father’s health.
+
+What stood out the most was not only his treatment but also his consistent follow-up and guidance, which gave us confidence throughout the recovery journey. Dr. Pavan Kumar Ediga is approachable, compassionate, and highly professional.
+
+We are truly thankful for his support and would strongly recommend him to anyone in need of neurological care."</p>
+                    <p class="font-bold text-slate-900">- Ram Reddy Yerrabotu </p>
                 </div>
                 <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100">
                     <div class="flex text-yellow-400 mb-4">
@@ -914,9 +903,8 @@
                         <i data-lucide="star" class="h-4 w-4 fill-current"></i>
                         <i data-lucide="star" class="h-4 w-4 fill-current"></i>
                     </div>
-                    <p class="text-slate-600 italic mb-4">"Dr. Pavan is very patient and approachable. His expertise in
-                        endoscopic spine surgery really helped my father get back on his feet."</p>
-                    <p class="font-bold text-slate-900">- Priya S.</p>
+                    <p class="text-slate-600 italic mb-4">"had a great experience with Dr. Pavankumar E. From the moment I arrived, I felt well taken care of. Dr. Pavankumar was very thorough in explaining condition and the treatment options, which helped me feel more informed and confident. They listened attentively to my concerns and answered all of my questions in a way that was easy to understand. The appointment was timely, and I didn’t feel rushed at all. I appreciate the compassionate and professional approach for treatment. I would highly recommend Dr.pavankumar to anyone seeking a neurosurgeon .👍"</p>
+                    <p class="font-bold text-slate-900">- Madhuri a.n.a</p>
                 </div>
             </div>
         </div>
@@ -930,32 +918,22 @@
             <div class="business-card w-full max-w-[600px] aspect-[1.75/1] mx-auto bg-white rounded-xl shadow-2xl overflow-hidden relative border border-slate-200"
                 data-tilt data-tilt-max="15" data-tilt-speed="400" data-tilt-glare data-tilt-max-glare="0.2">
 
-                <!-- Background Pattern -->
                 <div class="absolute inset-0 opacity-[0.03] z-0"
                     style="background-image: url('data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'none\' fill-rule=\'evenodd\'%3E%3Cg fill=\'%23000000\' fill-opacity=\'1\'%3E%3Cpath d=\'M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');">
                 </div>
 
-                <div
-                    class="business-card-content relative z-10 h-full flex flex-col md:flex-row p-8 items-center gap-8">
-                    <!-- Left Side: Logo -->
-                    <div
-                        class="business-card-logo w-full md:w-5/12 flex flex-col items-center justify-center border-b md:border-b-0 md:border-r border-slate-200 pb-6 md:pb-0 md:pr-6">
-                        <img src="photos/continental.png"
-                            alt="Continental Hospitals Logo"
+                <div class="business-card-content relative z-10 h-full flex flex-col md:flex-row p-8 items-center gap-8">
+                    <div class="business-card-logo w-full md:w-5/12 flex flex-col items-center justify-center border-b md:border-b-0 md:border-r border-slate-200 pb-6 md:pb-0 md:pr-6">
+                        <img src="photos/continental.png" alt="Continental Hospitals Logo"
                             class="w-40 md:w-48 object-contain mb-4 filter contrast-125">
                     </div>
-
-                    <!-- Right Side: Details -->
                     <div class="w-full md:w-7/12 text-center md:text-right space-y-1">
                         <h3 class="text-2xl font-bold text-teal-700 font-serif">Dr E Pavan Kumar</h3>
-                        <p class="text-xs text-slate-500 font-semibold uppercase tracking-wider mb-2">MBBS, MS, MCh
-                            (Neuro Surgery)</p>
-
-                        <p class="text-sm font-bold text-slate-800">Consultant Neuro Surgeon</p>
-                        <p class="text-xs text-slate-600 mb-4">Minimal Invasive Brain & Spine Surgeon</p>
-
-                        <div
-                            class="text-[10px] sm:text-xs text-slate-500 space-y-1 mt-4 border-t border-slate-100 pt-3">
+                        <p class="text-xs text-slate-500 font-semibold uppercase tracking-wider mb-2">MBBS, MS, MCh (Neuro Surgery)</p>
+                        <p class="text-sm font-semibold text-slate-800">Consultant</p>
+                        <p class="text-xs text-slate-600 mb-4">Dept. of Neuro surgery</p>
+                        <p class="text-xs text-slate-600 mb-4">Brain & Spine surgeron</p>
+                        <div class="text-[10px] sm:text-xs text-slate-500 space-y-1 mt-4 border-t border-slate-100 pt-3">
                             <p class="flex items-center justify-center md:justify-end gap-2">
                                 <i data-lucide="phone" class="h-3 w-3 text-teal-600"></i>
                                 +91 70930 85231
@@ -969,9 +947,8 @@
                                 drpavan.e@continentalhospitals.com
                             </p>
                             <p class="flex items-center justify-center md:justify-end gap-2 mt-2">
-                                <i data-lucide="map-pin" class="h-3 w-3 text-teal-600"></i>
-                                <span class="max-w-[200px] text-right">IT & Financial Dist, Gachibowli, Hyderabad - 500
-                                    032</span>
+                                
+                                <span class="max-w-[200px] text-right">IT & Financial Dist, Gachibowli, Hyderabad - 500 032</span>
                             </p>
                         </div>
                     </div>
@@ -1020,6 +997,7 @@
                     <ul class="space-y-2 text-sm">
                         <li><a href="#home" class="hover:text-white transition-colors">Home</a></li>
                         <li><a href="#about" class="hover:text-white transition-colors">About Doctor</a></li>
+                        <li><a href="#videos" class="hover:text-white transition-colors">Videos</a></li>
                         <li><a href="#services" class="hover:text-white transition-colors">Treatments</a></li>
                         <li><a href="#location" class="hover:text-white transition-colors">Clinics</a></li>
                     </ul>
@@ -1033,18 +1011,15 @@
                 </div>
             </div>
             <div class="border-t border-slate-800 pt-8 text-center text-xs">
-                <p>&copy;
-                    <script>document.write(new Date().getFullYear())</script> Dr. Pavan Kumar Ediga. All rights
-                    reserved.
-                </p>
+                <p>&copy; <script>document.write(new Date().getFullYear())</script> Dr. Pavan Kumar Ediga. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
-    <!-- Simple Appointment Modal -->
+    <!-- Appointment Modal -->
     <div id="appointmentModal"
         class="fixed inset-0 bg-black/50 z-[60] hidden flex items-center justify-center p-4 backdrop-blur-sm">
-        <div class="bg-white rounded-2xl w-full max-w-md p-6 shadow-2xl relative animate-[fadeIn_0.2s_ease-out]">
+        <div class="bg-white rounded-2xl w-full max-w-md p-6 shadow-2xl relative">
             <button onclick="document.getElementById('appointmentModal').classList.add('hidden')"
                 class="absolute top-4 right-4 text-slate-400 hover:text-slate-600">
                 <i data-lucide="x" class="h-6 w-6"></i>
@@ -1066,10 +1041,8 @@
                 </div>
                 <div>
                     <label class="block text-sm font-medium text-slate-700 mb-1">Preferred Location</label>
-                    <select
-                        class="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all">
+                    <select class="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all">
                         <option>Continental Hospitals, Gachibowli</option>
-
                     </select>
                 </div>
                 <button type="submit"
@@ -1101,6 +1074,39 @@
                 navbar.classList.add('shadow-sm');
             }
         });
+
+        // ============================================================
+        // VIDEO PLAYER SWITCHER
+        // ============================================================
+        function changeVideo(id, title, desc) {
+            const player = document.getElementById('mainYoutubePlayer');
+            const titleElem = document.getElementById('videoTitle');
+            const descElem = document.getElementById('videoDesc');
+
+            // Update iframe src with autoplay
+            player.src = `https://www.youtube.com/embed/${id}?autoplay=1`;
+
+            // Update title and description
+            titleElem.innerText = title;
+            descElem.innerText = desc;
+
+            // Remove active state from all playlist buttons
+            document.querySelectorAll('.video-playlist-btn').forEach(btn => {
+                btn.classList.remove('video-btn-active');
+            });
+
+            // Set active state on clicked button
+            const activeBtn = document.getElementById('btn-' + id);
+            if (activeBtn) {
+                activeBtn.classList.add('video-btn-active');
+            }
+
+            // On mobile, scroll the player into view
+            if (window.innerWidth < 1024) {
+                player.closest('div').scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }
+        }
+        // ============================================================
     </script>
 </body>
 
