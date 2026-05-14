@@ -72,24 +72,52 @@
             border-color: #2563eb !important;
             background-color: #eff6ff !important;
         }
+
+
+        @keyframes heartbeat {
+            0% {
+                transform: scale(1);
+            }
+
+            14% {
+                transform: scale(1.05);
+            }
+
+            28% {
+                transform: scale(1);
+            }
+
+            42% {
+                transform: scale(1.05);
+            }
+
+            70% {
+                transform: scale(1);
+            }
+        }
+
+        .animate-heartbeat {
+            animation: heartbeat 1.5s ease-in-out infinite;
+        }
     </style>
 </head>
 
 <body class="text-slate-800 bg-white">
 
     <!-- Navigation -->
-   <nav class="bg-white shadow-sm fixed w-full z-50 transition-all duration-300" id="navbar">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex justify-between h-20">
-            <div class="flex items-center">
-                <div class="flex-shrink-0 flex items-center gap-3">
-                    <img src="photos/LOGO.png" alt="Dr. Pavan Kumar Ediga Logo" class="h-12 w-auto object-contain">
-                    <div>
-                        <span class="font-bold text-xl block leading-none text-slate-900">Dr. Pavan Kumar Ediga</span>
-                        <span class="text-xs font-medium text-slate-500 tracking-wider">MCh NEUROSURGERY</span>
+    <nav class="bg-white shadow-sm fixed w-full z-50 transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0 flex items-center gap-3">
+                        <img src="photos/LOGO.png" alt="Dr. Pavan Kumar Ediga Logo" class="h-12 w-auto object-contain">
+                        <div>
+                            <span class="font-bold text-xl block leading-none text-slate-900">Dr. Pavan Kumar
+                                Ediga</span>
+                            <span class="text-xs font-medium text-slate-500 tracking-wider">MCh NEUROSURGERY</span>
+                        </div>
                     </div>
                 </div>
-            </div>
                 <div class="hidden md:flex items-center space-x-8">
                     <a href="#home" class="text-slate-600 hover:text-blue-600 font-medium transition-colors">Home</a>
                     <a href="#about" class="text-slate-600 hover:text-blue-600 font-medium transition-colors">About</a>
@@ -198,8 +226,11 @@
                         </div>
                     </div>
                     <!-- Decorative Elements -->
-                    <div class="absolute -top-6 -right-6 h-24 w-24 bg-blue-100 rounded-full blur-2xl -z-10 opacity-60"></div>
-                    <div class="absolute -bottom-6 -left-6 h-32 w-32 bg-teal-100 rounded-full blur-2xl -z-10 opacity-60"></div>
+                    <div class="absolute -top-6 -right-6 h-24 w-24 bg-blue-100 rounded-full blur-2xl -z-10 opacity-60">
+                    </div>
+                    <div
+                        class="absolute -bottom-6 -left-6 h-32 w-32 bg-teal-100 rounded-full blur-2xl -z-10 opacity-60">
+                    </div>
                 </div>
             </div>
         </div>
@@ -228,7 +259,8 @@
                         <i data-lucide="bot" class="h-8 w-8"></i>
                     </div>
                     <div class="text-4xl font-bold text-slate-900 mb-1">200+</div>
-                    <div class="text-slate-500 text-sm font-medium uppercase tracking-wider">Minimal Invasive Surgeries</div>
+                    <div class="text-slate-500 text-sm font-medium uppercase tracking-wider">Minimal Invasive Surgeries
+                    </div>
                 </div>
                 <div class="flex flex-col items-center justify-center p-4">
                     <div class="mb-4 text-slate-400">
@@ -301,7 +333,8 @@
 
                 <!-- Card 3 -->
                 <div class="bg-slate-50 p-8 rounded-2xl border border-slate-100 hover:shadow-lg transition-shadow">
-                    <div class="w-12 h-12 bg-indigo-100 rounded-xl flex items-center justify-center text-indigo-600 mb-6">
+                    <div
+                        class="w-12 h-12 bg-indigo-100 rounded-xl flex items-center justify-center text-indigo-600 mb-6">
                         <i data-lucide="stethoscope" class="h-6 w-6"></i>
                     </div>
                     <h3 class="text-xl font-bold text-slate-900 mb-3">Professional Experience</h3>
@@ -343,7 +376,8 @@
                         </div>
                     </div>
                     <div class="md:col-span-8">
-                        <h4 class="font-bold text-slate-900 text-sm uppercase tracking-wider mb-4 border-b border-slate-200 pb-2">
+                        <h4
+                            class="font-bold text-slate-900 text-sm uppercase tracking-wider mb-4 border-b border-slate-200 pb-2">
                             Conference Participation</h4>
                         <div class="grid sm:grid-cols-3 gap-4">
                             <div class="bg-white p-4 rounded-lg border border-slate-200">
@@ -376,50 +410,70 @@
 
             <div class="grid md:grid-cols-2 gap-10">
                 <!-- Certificate 1 -->
-                <div class="certificate-card group bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden hover:shadow-xl transition-all duration-300">
+                <div
+                    class="certificate-card group bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden hover:shadow-xl transition-all duration-300">
                     <div class="relative aspect-[4/3] bg-slate-100 flex items-center justify-center overflow-hidden">
-                        <img src="photos/certificate1.png" alt="Spine Surgery Masterclass 2023" class="w-full h-full object-contain p-4 transition-transform duration-500 group-hover:scale-105">
+                        <img src="photos/certificate1.png" alt="Spine Surgery Masterclass 2023"
+                            class="w-full h-full object-contain p-4 transition-transform duration-500 group-hover:scale-105">
                     </div>
                     <div class="p-6">
                         <div class="flex justify-between items-start mb-4">
                             <div>
-                                <span class="px-2 py-1 rounded-md bg-blue-50 text-blue-700 text-[10px] font-bold uppercase tracking-wider">Guest Speaker</span>
+                                <span
+                                    class="px-2 py-1 rounded-md bg-blue-50 text-blue-700 text-[10px] font-bold uppercase tracking-wider">Guest
+                                    Speaker</span>
                                 <h3 class="text-xl font-bold text-slate-900 mt-2">Spine Surgery Masterclass 2023</h3>
                             </div>
                             <i data-lucide="medal" class="text-blue-600 h-6 w-6"></i>
                         </div>
-                        <p class="text-sm text-slate-600 mb-4 line-clamp-2 italic">"Update of Comprehensive Technique in Spine Surgery: Fullfill the Need for Leading Neurosurgeons in Global Competition and Patient Safety."</p>
-                        <div class="flex flex-wrap gap-4 text-xs font-medium text-slate-500 border-t border-slate-100 pt-4">
-                            <span class="flex items-center gap-1.5"><i data-lucide="calendar" class="h-3.5 w-3.5"></i> May 13 - 16, 2023</span>
-                            <span class="flex items-center gap-1.5"><i data-lucide="map-pin" class="h-3.5 w-3.5"></i> Bandung, West Java, Indonesia</span>
+                        <p class="text-sm text-slate-600 mb-4 line-clamp-2 italic">"Update of Comprehensive Technique in
+                            Spine Surgery: Fullfill the Need for Leading Neurosurgeons in Global Competition and Patient
+                            Safety."</p>
+                        <div
+                            class="flex flex-wrap gap-4 text-xs font-medium text-slate-500 border-t border-slate-100 pt-4">
+                            <span class="flex items-center gap-1.5"><i data-lucide="calendar" class="h-3.5 w-3.5"></i>
+                                May 13 - 16, 2023</span>
+                            <span class="flex items-center gap-1.5"><i data-lucide="map-pin" class="h-3.5 w-3.5"></i>
+                                Bandung, West Java, Indonesia</span>
                         </div>
                     </div>
                 </div>
 
                 <!-- Certificate 2 -->
-                <div class="certificate-card group bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden hover:shadow-xl transition-all duration-300">
+                <div
+                    class="certificate-card group bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden hover:shadow-xl transition-all duration-300">
                     <div class="relative aspect-[4/3] bg-slate-100 flex items-center justify-center overflow-hidden">
-                        <img src="photos/certificate2.jpeg" alt="Indonesian Neurospine Society 2023" class="w-full h-full object-contain p-4 transition-transform duration-500 group-hover:scale-105">
+                        <img src="photos/certificate2.jpeg" alt="Indonesian Neurospine Society 2023"
+                            class="w-full h-full object-contain p-4 transition-transform duration-500 group-hover:scale-105">
                     </div>
                     <div class="p-6">
                         <div class="flex justify-between items-start mb-4">
                             <div>
-                                <span class="px-2 py-1 rounded-md bg-teal-50 text-teal-700 text-[10px] font-bold uppercase tracking-wider">Expert Speaker</span>
-                                <h3 class="text-xl font-bold text-slate-900 mt-2">5th Annual Scientific Meeting (INSS)</h3>
+                                <span
+                                    class="px-2 py-1 rounded-md bg-teal-50 text-teal-700 text-[10px] font-bold uppercase tracking-wider">Expert
+                                    Speaker</span>
+                                <h3 class="text-xl font-bold text-slate-900 mt-2">5th Annual Scientific Meeting (INSS)
+                                </h3>
                             </div>
                             <i data-lucide="scroll" class="text-teal-600 h-6 w-6"></i>
                         </div>
-                        <p class="text-sm text-slate-600 mb-4 line-clamp-2 italic">"Advancing Skill & Sharpen Knowledge of Endoscopic & Minimally Invasive Neurospine Surgery to Support 6 Pillars of Health Transformation."</p>
-                        <div class="flex flex-wrap gap-4 text-xs font-medium text-slate-500 border-t border-slate-100 pt-4">
-                            <span class="flex items-center gap-1.5"><i data-lucide="calendar" class="h-3.5 w-3.5"></i> Dec 16 - 17, 2023</span>
-                            <span class="flex items-center gap-1.5"><i data-lucide="building" class="h-3.5 w-3.5"></i> Indonesian Neurospine Society (INSS)</span>
+                        <p class="text-sm text-slate-600 mb-4 line-clamp-2 italic">"Advancing Skill & Sharpen Knowledge
+                            of Endoscopic & Minimally Invasive Neurospine Surgery to Support 6 Pillars of Health
+                            Transformation."</p>
+                        <div
+                            class="flex flex-wrap gap-4 text-xs font-medium text-slate-500 border-t border-slate-100 pt-4">
+                            <span class="flex items-center gap-1.5"><i data-lucide="calendar" class="h-3.5 w-3.5"></i>
+                                Dec 16 - 17, 2023</span>
+                            <span class="flex items-center gap-1.5"><i data-lucide="building" class="h-3.5 w-3.5"></i>
+                                Indonesian Neurospine Society (INSS)</span>
                         </div>
                     </div>
                 </div>
             </div>
-            
+
             <div class="mt-12 text-center">
-                <div class="inline-flex items-center gap-2 bg-white px-4 py-2 rounded-full border border-slate-200 shadow-sm text-xs font-bold text-slate-500 uppercase tracking-widest">
+                <div
+                    class="inline-flex items-center gap-2 bg-white px-4 py-2 rounded-full border border-slate-200 shadow-sm text-xs font-bold text-slate-500 uppercase tracking-widest">
                     <i data-lucide="shield-check" class="h-4 w-4 text-green-500"></i>
                     IDI Accredited Credentials (SKP IDI)
                 </div>
@@ -433,63 +487,82 @@
             <div class="text-center mb-16">
                 <span class="text-blue-600 font-semibold tracking-wider text-sm uppercase">Surgical Excellence</span>
                 <h2 class="text-3xl md:text-4xl font-bold mt-2 mb-4 text-slate-900">Gallery</h2>
-                <p class="text-slate-500 max-w-2xl mx-auto">Visual documentation of advanced surgical procedures, tumor resections, and complex spinal reconstructions.</p>
+                <p class="text-slate-500 max-w-2xl mx-auto">Visual documentation of advanced surgical procedures, tumor
+                    resections, and complex spinal reconstructions.</p>
                 <div class="h-1 w-20 bg-blue-600 mx-auto rounded-full mt-6"></div>
             </div>
 
             <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-                <div class="gallery-item group relative aspect-square bg-slate-100 rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300">
-                    <img src="photos/WhatsApp Image 2026-02-06 at 10.22.36 PM.jpeg" alt="Comparative Views" class="w-full h-full object-cover">
-                    <div class="gallery-overlay absolute inset-0 bg-slate-900/60 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col items-center justify-center p-4 text-center">
+                <div
+                    class="gallery-item group relative aspect-square bg-slate-100 rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300">
+                    <img src="photos/WhatsApp Image 2026-02-06 at 10.22.36 PM.jpeg" alt="Comparative Views"
+                        class="w-full h-full object-cover">
+                    <div
+                        class="gallery-overlay absolute inset-0 bg-slate-900/60 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col items-center justify-center p-4 text-center">
                         <span class="text-white text-xs font-bold uppercase tracking-widest mb-1">Review</span>
                         <p class="text-white/80 text-[10px]">Comparative Views</p>
                     </div>
                 </div>
-                <div class="gallery-item group relative aspect-square bg-slate-100 rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300">
-                    <img src="photos/WhatsApp Image 2026-02-06 at 10.22.37 PM (1).jpeg" alt="Comparative Views" class="w-full h-full object-cover">
-                    <div class="gallery-overlay absolute inset-0 bg-slate-900/60 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col items-center justify-center p-4 text-center">
+                <div
+                    class="gallery-item group relative aspect-square bg-slate-100 rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300">
+                    <img src="photos/WhatsApp Image 2026-02-06 at 10.22.37 PM (1).jpeg" alt="Comparative Views"
+                        class="w-full h-full object-cover">
+                    <div
+                        class="gallery-overlay absolute inset-0 bg-slate-900/60 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col items-center justify-center p-4 text-center">
                         <span class="text-white text-xs font-bold uppercase tracking-widest mb-1">Review</span>
                         <p class="text-white/80 text-[10px]">Comparative Views</p>
                     </div>
                 </div>
-                <div class="gallery-item group relative aspect-square bg-slate-100 rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300">
-                    <img src="photos/WhatsApp Image 2026-02-06 at 10.22.37 PM.jpeg" alt="Comparative Views" class="w-full h-full object-cover">
-                    <div class="gallery-overlay absolute inset-0 bg-slate-900/60 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col items-center justify-center p-4 text-center">
+                <div
+                    class="gallery-item group relative aspect-square bg-slate-100 rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300">
+                    <img src="photos/WhatsApp Image 2026-02-06 at 10.22.37 PM.jpeg" alt="Comparative Views"
+                        class="w-full h-full object-cover">
+                    <div
+                        class="gallery-overlay absolute inset-0 bg-slate-900/60 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col items-center justify-center p-4 text-center">
                         <span class="text-white text-xs font-bold uppercase tracking-widest mb-1">Review</span>
                         <p class="text-white/80 text-[10px]">Comparative Views</p>
                     </div>
                 </div>
-                <div class="gallery-item group relative aspect-square bg-slate-100 rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300">
+                <div
+                    class="gallery-item group relative aspect-square bg-slate-100 rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300">
                     <img src="photos/17.jpeg" alt="Comparative Views" class="w-full h-full object-cover">
-                    <div class="gallery-overlay absolute inset-0 bg-slate-900/60 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col items-center justify-center p-4 text-center">
+                    <div
+                        class="gallery-overlay absolute inset-0 bg-slate-900/60 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col items-center justify-center p-4 text-center">
                         <span class="text-white text-xs font-bold uppercase tracking-widest mb-1">Review</span>
                         <p class="text-white/80 text-[10px]">Comparative Views</p>
                     </div>
                 </div>
-                <div class="gallery-item group relative aspect-square bg-slate-100 rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300">
+                <div
+                    class="gallery-item group relative aspect-square bg-slate-100 rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300">
                     <img src="photos/18.jpeg" alt="Comparative Views" class="w-full h-full object-cover">
-                    <div class="gallery-overlay absolute inset-0 bg-slate-900/60 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col items-center justify-center p-4 text-center">
+                    <div
+                        class="gallery-overlay absolute inset-0 bg-slate-900/60 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col items-center justify-center p-4 text-center">
                         <span class="text-white text-xs font-bold uppercase tracking-widest mb-1">Review</span>
                         <p class="text-white/80 text-[10px]">Comparative Views</p>
                     </div>
                 </div>
-                <div class="gallery-item group relative aspect-square bg-slate-100 rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300">
+                <div
+                    class="gallery-item group relative aspect-square bg-slate-100 rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300">
                     <img src="photos/19.jpeg" alt="Comparative Views" class="w-full h-full object-cover">
-                    <div class="gallery-overlay absolute inset-0 bg-slate-900/60 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col items-center justify-center p-4 text-center">
+                    <div
+                        class="gallery-overlay absolute inset-0 bg-slate-900/60 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col items-center justify-center p-4 text-center">
                         <span class="text-white text-xs font-bold uppercase tracking-widest mb-1">Review</span>
                         <p class="text-white/80 text-[10px]">Comparative Views</p>
                     </div>
                 </div>
-                <div class="gallery-item group relative aspect-square bg-slate-100 rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300">
+                <div
+                    class="gallery-item group relative aspect-square bg-slate-100 rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300">
                     <img src="photos/20.jpeg" alt="Comparative Views" class="w-full h-full object-cover">
-                    <div class="gallery-overlay absolute inset-0 bg-slate-900/60 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col items-center justify-center p-4 text-center">
+                    <div
+                        class="gallery-overlay absolute inset-0 bg-slate-900/60 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col items-center justify-center p-4 text-center">
                         <span class="text-white text-xs font-bold uppercase tracking-widest mb-1">Review</span>
                         <p class="text-white/80 text-[10px]">Comparative Views</p>
                     </div>
                 </div>
             </div>
-            
-            <p class="text-center text-slate-400 text-xs mt-10 italic">* Clinical images shared for educational and verification purposes.</p>
+
+            <p class="text-center text-slate-400 text-xs mt-10 italic">* Clinical images shared for educational and
+                verification purposes.</p>
         </div>
     </section>
 
@@ -500,32 +573,34 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
                 <span class="text-blue-600 font-semibold tracking-wider text-sm uppercase">Video Library</span>
-                <h2 class="text-3xl md:text-4xl font-bold mt-2 mb-4 text-slate-900">Clinical Insights & Patient Success</h2>
-                <p class="text-slate-500 max-w-2xl mx-auto">Watch patient testimonials, procedural overviews, and educational content from Dr. Pavan Kumar Ediga.</p>
+                <h2 class="text-3xl md:text-4xl font-bold mt-2 mb-4 text-slate-900">Clinical Insights & Patient Success
+                </h2>
+                <p class="text-slate-500 max-w-2xl mx-auto">Watch patient testimonials, procedural overviews, and
+                    educational content from Dr. Pavan Kumar Ediga.</p>
                 <div class="h-1 w-20 bg-blue-600 mx-auto rounded-full mt-6"></div>
             </div>
 
             <div class="grid lg:grid-cols-3 gap-8 items-start">
                 <!-- Main Player -->
                 <div class="lg:col-span-2">
-                    <div class="bg-black rounded-2xl overflow-hidden shadow-2xl aspect-video relative border-4 border-white">
-                        <iframe id="mainYoutubePlayer"
-                            class="absolute inset-0 w-full h-full"
-                            src="https://www.youtube.com/embed/c9nBqZbZcB0"
-                            title="YouTube video player"
-                            frameborder="0"
+                    <div
+                        class="bg-black rounded-2xl overflow-hidden shadow-2xl aspect-video relative border-4 border-white">
+                        <iframe id="mainYoutubePlayer" class="absolute inset-0 w-full h-full"
+                            src="https://www.youtube.com/embed/c9nBqZbZcB0" title="YouTube video player" frameborder="0"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                             allowfullscreen>
                         </iframe>
                     </div>
                     <div class="mt-6 p-6 bg-white rounded-xl shadow-sm border border-slate-100">
                         <div class="flex items-start gap-3">
-                            <div class="h-10 w-10 bg-blue-100 rounded-lg flex items-center justify-center shrink-0 mt-0.5">
+                            <div
+                                class="h-10 w-10 bg-blue-100 rounded-lg flex items-center justify-center shrink-0 mt-0.5">
                                 <i data-lucide="play-circle" class="h-5 w-5 text-blue-600"></i>
                             </div>
                             <div>
                                 <h3 id="videoTitle" class="text-xl font-bold text-slate-900">Patient Success Story</h3>
-                                <p id="videoDesc" class="text-slate-600 text-sm mt-2 leading-relaxed">Detailed walkthrough of a successful neurosurgical intervention and patient recovery.</p>
+                                <p id="videoDesc" class="text-slate-600 text-sm mt-2 leading-relaxed">Detailed
+                                    walkthrough of a successful neurosurgical intervention and patient recovery.</p>
                             </div>
                         </div>
                     </div>
@@ -536,97 +611,121 @@
                     <p class="text-xs font-bold text-slate-400 uppercase tracking-widest px-1 mb-4">Up Next</p>
 
                     <!-- Video 1 -->
-                    <button onclick="changeVideo('c9nBqZbZcB0', 'Patient Success Story', 'Detailed walkthrough of a successful neurosurgical intervention and patient recovery.')"
+                    <button
+                        onclick="changeVideo('c9nBqZbZcB0', 'Patient Success Story', 'Detailed walkthrough of a successful neurosurgical intervention and patient recovery.')"
                         class="video-playlist-btn w-full flex gap-3 p-3 rounded-xl bg-white border border-slate-200 hover:border-blue-500 hover:bg-blue-50 transition-all text-left group shadow-sm video-btn-active"
                         id="btn-c9nBqZbZcB0">
                         <div class="relative w-28 h-16 shrink-0 rounded-lg overflow-hidden">
-                            <img src="https://img.youtube.com/vi/c9nBqZbZcB0/mqdefault.jpg" class="object-cover w-full h-full" alt="Thumbnail">
-                            <div class="absolute inset-0 flex items-center justify-center bg-black/30 group-hover:bg-black/50 transition-colors">
+                            <img src="https://img.youtube.com/vi/c9nBqZbZcB0/mqdefault.jpg"
+                                class="object-cover w-full h-full" alt="Thumbnail">
+                            <div
+                                class="absolute inset-0 flex items-center justify-center bg-black/30 group-hover:bg-black/50 transition-colors">
                                 <i data-lucide="play" class="text-white h-5 w-5 drop-shadow"></i>
                             </div>
                         </div>
                         <div class="flex-1 min-w-0">
-                            <h4 class="font-bold text-slate-900 text-[11px] leading-tight line-clamp-2">Patient Success Story</h4>
+                            <h4 class="font-bold text-slate-900 text-[11px] leading-tight line-clamp-2">Patient Success
+                                Story</h4>
                             <span class="text-[9px] text-blue-600 font-bold uppercase mt-1 block">Testimonial</span>
                         </div>
                     </button>
 
                     <!-- Video 2 -->
-                    <button onclick="changeVideo('KG8zTpbvna4', 'Neurological Health Insights', 'Dr. Pavan Kumar provides educational insights into brain health and neurological conditions.')"
+                    <button
+                        onclick="changeVideo('KG8zTpbvna4', 'Neurological Health Insights', 'Dr. Pavan Kumar provides educational insights into brain health and neurological conditions.')"
                         class="video-playlist-btn w-full flex gap-3 p-3 rounded-xl bg-white border border-slate-200 hover:border-blue-500 hover:bg-blue-50 transition-all text-left group shadow-sm"
                         id="btn-KG8zTpbvna4">
                         <div class="relative w-28 h-16 shrink-0 rounded-lg overflow-hidden">
-                            <img src="https://img.youtube.com/vi/KG8zTpbvna4/mqdefault.jpg" class="object-cover w-full h-full" alt="Thumbnail">
-                            <div class="absolute inset-0 flex items-center justify-center bg-black/30 group-hover:bg-black/50 transition-colors">
+                            <img src="https://img.youtube.com/vi/KG8zTpbvna4/mqdefault.jpg"
+                                class="object-cover w-full h-full" alt="Thumbnail">
+                            <div
+                                class="absolute inset-0 flex items-center justify-center bg-black/30 group-hover:bg-black/50 transition-colors">
                                 <i data-lucide="play" class="text-white h-5 w-5 drop-shadow"></i>
                             </div>
                         </div>
                         <div class="flex-1 min-w-0">
-                            <h4 class="font-bold text-slate-900 text-[11px] leading-tight line-clamp-2">Neurological Care Overview</h4>
+                            <h4 class="font-bold text-slate-900 text-[11px] leading-tight line-clamp-2">Neurological
+                                Care Overview</h4>
                             <span class="text-[9px] text-teal-600 font-bold uppercase mt-1 block">Education</span>
                         </div>
                     </button>
 
                     <!-- Video 3 -->
-                    <button onclick="changeVideo('HqXLdkCNq20', 'Endoscopic Spine Techniques', 'Understanding the benefits and procedure of minimally invasive keyhole spine surgery.')"
+                    <button
+                        onclick="changeVideo('HqXLdkCNq20', 'Endoscopic Spine Techniques', 'Understanding the benefits and procedure of minimally invasive keyhole spine surgery.')"
                         class="video-playlist-btn w-full flex gap-3 p-3 rounded-xl bg-white border border-slate-200 hover:border-blue-500 hover:bg-blue-50 transition-all text-left group shadow-sm"
                         id="btn-HqXLdkCNq20">
                         <div class="relative w-28 h-16 shrink-0 rounded-lg overflow-hidden">
-                            <img src="https://img.youtube.com/vi/HqXLdkCNq20/mqdefault.jpg" class="object-cover w-full h-full" alt="Thumbnail">
-                            <div class="absolute inset-0 flex items-center justify-center bg-black/30 group-hover:bg-black/50 transition-colors">
+                            <img src="https://img.youtube.com/vi/HqXLdkCNq20/mqdefault.jpg"
+                                class="object-cover w-full h-full" alt="Thumbnail">
+                            <div
+                                class="absolute inset-0 flex items-center justify-center bg-black/30 group-hover:bg-black/50 transition-colors">
                                 <i data-lucide="play" class="text-white h-5 w-5 drop-shadow"></i>
                             </div>
                         </div>
                         <div class="flex-1 min-w-0">
-                            <h4 class="font-bold text-slate-900 text-[11px] leading-tight line-clamp-2">Spine Surgery Insights</h4>
+                            <h4 class="font-bold text-slate-900 text-[11px] leading-tight line-clamp-2">Spine Surgery
+                                Insights</h4>
                             <span class="text-[9px] text-indigo-600 font-bold uppercase mt-1 block">Procedure</span>
                         </div>
                     </button>
 
                     <!-- Video 4 -->
-                    <button onclick="changeVideo('ShH2xESwcoI', 'Complex Tumor Management', 'Case review of neuro-oncology and surgical removal of brain lesions.')"
+                    <button
+                        onclick="changeVideo('ShH2xESwcoI', 'Complex Tumor Management', 'Case review of neuro-oncology and surgical removal of brain lesions.')"
                         class="video-playlist-btn w-full flex gap-3 p-3 rounded-xl bg-white border border-slate-200 hover:border-blue-500 hover:bg-blue-50 transition-all text-left group shadow-sm"
                         id="btn-ShH2xESwcoI">
                         <div class="relative w-28 h-16 shrink-0 rounded-lg overflow-hidden">
-                            <img src="https://img.youtube.com/vi/ShH2xESwcoI/mqdefault.jpg" class="object-cover w-full h-full" alt="Thumbnail">
-                            <div class="absolute inset-0 flex items-center justify-center bg-black/30 group-hover:bg-black/50 transition-colors">
+                            <img src="https://img.youtube.com/vi/ShH2xESwcoI/mqdefault.jpg"
+                                class="object-cover w-full h-full" alt="Thumbnail">
+                            <div
+                                class="absolute inset-0 flex items-center justify-center bg-black/30 group-hover:bg-black/50 transition-colors">
                                 <i data-lucide="play" class="text-white h-5 w-5 drop-shadow"></i>
                             </div>
                         </div>
                         <div class="flex-1 min-w-0">
-                            <h4 class="font-bold text-slate-900 text-[11px] leading-tight line-clamp-2">Tumor Resection Case</h4>
+                            <h4 class="font-bold text-slate-900 text-[11px] leading-tight line-clamp-2">Tumor Resection
+                                Case</h4>
                             <span class="text-[9px] text-red-600 font-bold uppercase mt-1 block">Case Study</span>
                         </div>
                     </button>
 
                     <!-- Video 5 -->
-                    <button onclick="changeVideo('YjI1RfRjbyw', 'Trauma & Emergency Response', 'Rapid intervention protocols for traumatic head and spine injuries.')"
+                    <button
+                        onclick="changeVideo('YjI1RfRjbyw', 'Trauma & Emergency Response', 'Rapid intervention protocols for traumatic head and spine injuries.')"
                         class="video-playlist-btn w-full flex gap-3 p-3 rounded-xl bg-white border border-slate-200 hover:border-blue-500 hover:bg-blue-50 transition-all text-left group shadow-sm"
                         id="btn-YjI1RfRjbyw">
                         <div class="relative w-28 h-16 shrink-0 rounded-lg overflow-hidden">
-                            <img src="https://img.youtube.com/vi/YjI1RfRjbyw/mqdefault.jpg" class="object-cover w-full h-full" alt="Thumbnail">
-                            <div class="absolute inset-0 flex items-center justify-center bg-black/30 group-hover:bg-black/50 transition-colors">
+                            <img src="https://img.youtube.com/vi/YjI1RfRjbyw/mqdefault.jpg"
+                                class="object-cover w-full h-full" alt="Thumbnail">
+                            <div
+                                class="absolute inset-0 flex items-center justify-center bg-black/30 group-hover:bg-black/50 transition-colors">
                                 <i data-lucide="play" class="text-white h-5 w-5 drop-shadow"></i>
                             </div>
                         </div>
                         <div class="flex-1 min-w-0">
-                            <h4 class="font-bold text-slate-900 text-[11px] leading-tight line-clamp-2">Emergency Intervention</h4>
+                            <h4 class="font-bold text-slate-900 text-[11px] leading-tight line-clamp-2">Emergency
+                                Intervention</h4>
                             <span class="text-[9px] text-orange-600 font-bold uppercase mt-1 block">Neuro Trauma</span>
                         </div>
                     </button>
 
                     <!-- Video 6 -->
-                    <button onclick="changeVideo('Z5u4UNP7X5c', 'Rehabilitation & Post-Op Care', 'The importance of follow-up care and rehabilitation in neurosurgical recovery.')"
+                    <button
+                        onclick="changeVideo('Z5u4UNP7X5c', 'Rehabilitation & Post-Op Care', 'The importance of follow-up care and rehabilitation in neurosurgical recovery.')"
                         class="video-playlist-btn w-full flex gap-3 p-3 rounded-xl bg-white border border-slate-200 hover:border-blue-500 hover:bg-blue-50 transition-all text-left group shadow-sm"
                         id="btn-Z5u4UNP7X5c">
                         <div class="relative w-28 h-16 shrink-0 rounded-lg overflow-hidden">
-                            <img src="https://img.youtube.com/vi/Z5u4UNP7X5c/mqdefault.jpg" class="object-cover w-full h-full" alt="Thumbnail">
-                            <div class="absolute inset-0 flex items-center justify-center bg-black/30 group-hover:bg-black/50 transition-colors">
+                            <img src="https://img.youtube.com/vi/Z5u4UNP7X5c/mqdefault.jpg"
+                                class="object-cover w-full h-full" alt="Thumbnail">
+                            <div
+                                class="absolute inset-0 flex items-center justify-center bg-black/30 group-hover:bg-black/50 transition-colors">
                                 <i data-lucide="play" class="text-white h-5 w-5 drop-shadow"></i>
                             </div>
                         </div>
                         <div class="flex-1 min-w-0">
-                            <h4 class="font-bold text-slate-900 text-[11px] leading-tight line-clamp-2">Recovery Journey</h4>
+                            <h4 class="font-bold text-slate-900 text-[11px] leading-tight line-clamp-2">Recovery Journey
+                            </h4>
                             <span class="text-[9px] text-green-600 font-bold uppercase mt-1 block">Rehab</span>
                         </div>
                     </button>
@@ -649,7 +748,8 @@
             </div>
 
             <!-- Awards Highlight -->
-            <div class="bg-white rounded-2xl p-8 shadow-sm border-l-4 border-yellow-400 mb-12 flex flex-col md:flex-row items-center gap-6">
+            <div
+                class="bg-white rounded-2xl p-8 shadow-sm border-l-4 border-yellow-400 mb-12 flex flex-col md:flex-row items-center gap-6">
                 <div class="bg-yellow-100 p-4 rounded-full text-yellow-600 shrink-0">
                     <i data-lucide="trophy" class="h-8 w-8"></i>
                 </div>
@@ -668,8 +768,10 @@
                         Distinguished Mentors
                     </h3>
                     <div class="space-y-4">
-                        <div class="bg-white p-6 rounded-xl border border-slate-200 flex items-center gap-4 hover:shadow-md transition-shadow">
-                            <div class="h-12 w-12 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 font-bold text-lg shrink-0">
+                        <div
+                            class="bg-white p-6 rounded-xl border border-slate-200 flex items-center gap-4 hover:shadow-md transition-shadow">
+                            <div
+                                class="h-12 w-12 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 font-bold text-lg shrink-0">
                                 DP
                             </div>
                             <div>
@@ -678,14 +780,17 @@
                                 <p class="text-xs text-blue-600 font-medium mt-1">Spine Surgery Mentorship</p>
                             </div>
                         </div>
-                        <div class="bg-white p-6 rounded-xl border border-slate-200 flex items-center gap-4 hover:shadow-md transition-shadow">
-                            <div class="h-12 w-12 bg-teal-100 rounded-full flex items-center justify-center text-teal-600 font-bold text-lg shrink-0">
+                        <div
+                            class="bg-white p-6 rounded-xl border border-slate-200 flex items-center gap-4 hover:shadow-md transition-shadow">
+                            <div
+                                class="h-12 w-12 bg-teal-100 rounded-full flex items-center justify-center text-teal-600 font-bold text-lg shrink-0">
                                 HK
                             </div>
                             <div>
                                 <h4 class="font-bold text-slate-900 text-lg">Dr. Heung Sung Kim</h4>
                                 <p class="text-sm text-slate-500">Renowned Neurosurgeon</p>
-                                <p class="text-xs text-teal-600 font-medium mt-1">Harrison Spinaratus Hospital, South Korea</p>
+                                <p class="text-xs text-teal-600 font-medium mt-1">Harrison Spinaratus Hospital, South
+                                    Korea</p>
                             </div>
                         </div>
                     </div>
@@ -701,21 +806,28 @@
                         <div class="group relative aspect-video bg-slate-200 rounded-xl overflow-hidden">
                             <img src="photos/mentors.jpeg" alt="Receiving Fellowship Certificate"
                                 class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
-                            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent z-10"></div>
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent z-10">
+                            </div>
                             <div class="absolute bottom-3 left-3 right-3 z-20">
-                                <p class="text-white text-xs font-medium leading-tight drop-shadow-md">Receiving Fellowship Certificate from Dr. Heung Sung Kim</p>
+                                <p class="text-white text-xs font-medium leading-tight drop-shadow-md">Receiving
+                                    Fellowship Certificate from Dr. Heung Sung Kim</p>
                             </div>
                         </div>
                         <div class="group relative aspect-video bg-slate-200 rounded-xl overflow-hidden">
                             <img src="photos/donpark.jpeg" alt="Training with Mentors"
                                 class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
-                            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent z-10"></div>
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent z-10">
+                            </div>
                             <div class="absolute bottom-3 left-3 right-3 z-20">
-                                <p class="text-white text-xs font-medium leading-tight drop-shadow-md">Training with Dr. Don Park</p>
+                                <p class="text-white text-xs font-medium leading-tight drop-shadow-md">Training with Dr.
+                                    Don Park</p>
                             </div>
                         </div>
                     </div>
-                    <p class="text-xs text-slate-500 mt-4 italic">* International fellowship completion and advanced training sessions.</p>
+                    <p class="text-xs text-slate-500 mt-4 italic">* International fellowship completion and advanced
+                        training sessions.</p>
                 </div>
             </div>
         </div>
@@ -732,8 +844,10 @@
             </div>
 
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="bg-slate-800 p-8 rounded-2xl border border-slate-700 hover:border-blue-500 transition-colors group">
-                    <div class="h-12 w-12 bg-slate-700 rounded-lg flex items-center justify-center mb-6 group-hover:bg-blue-600 transition-colors">
+                <div
+                    class="bg-slate-800 p-8 rounded-2xl border border-slate-700 hover:border-blue-500 transition-colors group">
+                    <div
+                        class="h-12 w-12 bg-slate-700 rounded-lg flex items-center justify-center mb-6 group-hover:bg-blue-600 transition-colors">
                         <i data-lucide="minimize-2" class="h-6 w-6 text-blue-400 group-hover:text-white"></i>
                     </div>
                     <h3 class="text-xl font-bold mb-3">Minimally Invasive (Endoscopy) Spine Surgery</h3>
@@ -742,8 +856,10 @@
                         incisions, less pain, and faster recovery.
                     </p>
                 </div>
-                <div class="bg-slate-800 p-8 rounded-2xl border border-slate-700 hover:border-blue-500 transition-colors group">
-                    <div class="h-12 w-12 bg-slate-700 rounded-lg flex items-center justify-center mb-6 group-hover:bg-blue-600 transition-colors">
+                <div
+                    class="bg-slate-800 p-8 rounded-2xl border border-slate-700 hover:border-blue-500 transition-colors group">
+                    <div
+                        class="h-12 w-12 bg-slate-700 rounded-lg flex items-center justify-center mb-6 group-hover:bg-blue-600 transition-colors">
                         <i data-lucide="layers" class="h-6 w-6 text-blue-400 group-hover:text-white"></i>
                     </div>
                     <h3 class="text-xl font-bold mb-3">Neuro Oncology</h3>
@@ -752,8 +868,10 @@
                         gliomas and meningiomas.
                     </p>
                 </div>
-                <div class="bg-slate-800 p-8 rounded-2xl border border-slate-700 hover:border-blue-500 transition-colors group">
-                    <div class="h-12 w-12 bg-slate-700 rounded-lg flex items-center justify-center mb-6 group-hover:bg-blue-600 transition-colors">
+                <div
+                    class="bg-slate-800 p-8 rounded-2xl border border-slate-700 hover:border-blue-500 transition-colors group">
+                    <div
+                        class="h-12 w-12 bg-slate-700 rounded-lg flex items-center justify-center mb-6 group-hover:bg-blue-600 transition-colors">
                         <i data-lucide="siren" class="h-6 w-6 text-blue-400 group-hover:text-white"></i>
                     </div>
                     <h3 class="text-xl font-bold mb-3">Neuro Trauma</h3>
@@ -762,8 +880,10 @@
                         clots, and spinal cord injuries.
                     </p>
                 </div>
-                <div class="bg-slate-800 p-8 rounded-2xl border border-slate-700 hover:border-blue-500 transition-colors group">
-                    <div class="h-12 w-12 bg-slate-700 rounded-lg flex items-center justify-center mb-6 group-hover:bg-blue-600 transition-colors">
+                <div
+                    class="bg-slate-800 p-8 rounded-2xl border border-slate-700 hover:border-blue-500 transition-colors group">
+                    <div
+                        class="h-12 w-12 bg-slate-700 rounded-lg flex items-center justify-center mb-6 group-hover:bg-blue-600 transition-colors">
                         <i data-lucide="activity" class="h-6 w-6 text-blue-400 group-hover:text-white"></i>
                     </div>
                     <h3 class="text-xl font-bold mb-3">Treatment for Back Pain</h3>
@@ -772,8 +892,10 @@
                         management and surgical solutions.
                     </p>
                 </div>
-                <div class="bg-slate-800 p-8 rounded-2xl border border-slate-700 hover:border-blue-500 transition-colors group">
-                    <div class="h-12 w-12 bg-slate-700 rounded-lg flex items-center justify-center mb-6 group-hover:bg-blue-600 transition-colors">
+                <div
+                    class="bg-slate-800 p-8 rounded-2xl border border-slate-700 hover:border-blue-500 transition-colors group">
+                    <div
+                        class="h-12 w-12 bg-slate-700 rounded-lg flex items-center justify-center mb-6 group-hover:bg-blue-600 transition-colors">
                         <i data-lucide="smile" class="h-6 w-6 text-blue-400 group-hover:text-white"></i>
                     </div>
                     <h3 class="text-xl font-bold mb-3">Management of Headache</h3>
@@ -782,8 +904,10 @@
                         migraines, and neuralgias.
                     </p>
                 </div>
-                <div class="bg-slate-800 p-8 rounded-2xl border border-slate-700 hover:border-blue-500 transition-colors group">
-                    <div class="h-12 w-12 bg-slate-700 rounded-lg flex items-center justify-center mb-6 group-hover:bg-blue-600 transition-colors">
+                <div
+                    class="bg-slate-800 p-8 rounded-2xl border border-slate-700 hover:border-blue-500 transition-colors group">
+                    <div
+                        class="h-12 w-12 bg-slate-700 rounded-lg flex items-center justify-center mb-6 group-hover:bg-blue-600 transition-colors">
                         <i data-lucide="zap" class="h-6 w-6 text-blue-400 group-hover:text-white"></i>
                     </div>
                     <h3 class="text-xl font-bold mb-3">Facial Nerve Preservation</h3>
@@ -797,85 +921,107 @@
     </section>
 
     <!-- Location Section -->
-   <!-- Location Section -->
-<section id="location" class="py-20 bg-slate-50">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-16">
-            <h2 class="text-3xl font-bold text-slate-900 mb-4">Clinic Locations</h2>
-            <div class="h-1 w-20 bg-blue-600 mx-auto rounded-full"></div>
-        </div>
-
-        <!-- Updated Grid for Multiple Locations -->
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto w-full">
-            
-            <!-- Location 1 -->
-            <div class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden">
-                <div class="bg-blue-600 p-4 text-white">
-                    <h3 class="text-xl font-bold flex items-center gap-2">
-                        <i data-lucide="building-2" class="h-5 w-5"></i>
-                        Medicover Hospitals
-                    </h3>
-                </div>
-                <div class="p-8 space-y-4">
-                    <div class="flex items-start gap-4">
-                        <i data-lucide="map-pin" class="h-5 w-5 text-blue-600 mt-1 shrink-0"></i>
-                        <p class="text-slate-600">
-                            322, Myscape Rd, Financial District, Nanakramguda, Hyderabad, Telangana 500032
-                        </p>
-                    </div>
-                    <div class="flex items-start gap-4">
-                        <i data-lucide="clock" class="h-5 w-5 text-blue-600 mt-1 shrink-0"></i>
-                        <div>
-                            <p class="font-semibold text-slate-900">Consultation Hours:</p>
-                            <p class="text-slate-600">Mon - Sat: 09:00 AM - 05:00 PM</p>
-                        </div>
-                    </div>
-                    <a href="https://maps.app.goo.gl/6nWMAYGyRxUr9qJz7" target="_blank"
-                        class="block w-full text-center py-2 px-4 border border-blue-600 text-blue-600 rounded-lg hover:bg-blue-50 transition-colors mt-4 text-sm font-medium">
-                        Get Directions
-                    </a>
-                </div>
+    <!-- Location Section -->
+    <section id="location" class="py-20 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-slate-900 mb-4">Clinic Locations</h2>
+                <div class="h-1 w-20 bg-blue-600 mx-auto rounded-full"></div>
             </div>
 
-            <!-- Location 2 -->
-            <div class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden">
-                <div class="bg-blue-600 p-4 text-white">
-                    <h3 class="text-xl font-bold flex items-center gap-2">
-                        <i data-lucide="building-2" class="h-5 w-5"></i>
-                        Pavan & Spine Clinic
-                    </h3>
+            <!-- Updated Grid for Multiple Locations -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto w-full">
+
+                <!-- Location 1 -->
+                <div class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden">
+                    <div class="bg-blue-600 p-4 text-white">
+                        <h3 class="text-xl font-bold flex items-center gap-2">
+                            <i data-lucide="building-2" class="h-5 w-5"></i>
+                            Medicover Hospitals
+                        </h3>
+                    </div>
+                    <div class="p-8 space-y-4">
+                        <div class="flex items-start gap-4">
+                            <i data-lucide="map-pin" class="h-5 w-5 text-blue-600 mt-1 shrink-0"></i>
+                            <p class="text-slate-600">
+                                322, Myscape Rd, Financial District, Nanakramguda, Hyderabad, Telangana 500032
+                            </p>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <i data-lucide="clock" class="h-5 w-5 text-blue-600 mt-1 shrink-0"></i>
+                            <div>
+                                <p class="font-semibold text-slate-900">Consultation Hours:</p>
+                                <p class="text-slate-600">Mon - Sat: 09:00 AM - 05:00 PM</p>
+                            </div>
+                        </div>
+                        <a href="https://maps.app.goo.gl/6nWMAYGyRxUr9qJz7" target="_blank"
+                            class="block w-full text-center py-2 px-4 border border-blue-600 text-blue-600 rounded-lg hover:bg-blue-50 transition-colors mt-4 text-sm font-medium">
+                            Get Directions
+                        </a>
+                    </div>
                 </div>
-                <div class="p-8 space-y-4">
-                    <div class="flex items-start gap-4">
-                        <i data-lucide="map-pin" class="h-5 w-5 text-blue-600 mt-1 shrink-0"></i>
-                        <p class="text-slate-600">
-                            99VH+FJ3 Neknampur Road, Alkapoor Twp Main Rd, Secretariat Employees Colony, Manikonda, Hyderabad, Telangana 500089
+
+                <!-- Location 2 -->
+                <div class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden">
+                    <div class="bg-blue-600 p-4 text-white">
+                        <h3 class="text-xl font-bold flex items-center gap-2">
+                            <i data-lucide="building-2" class="h-5 w-5"></i>
+                            Pavan Brain & Spine Clinic
+                        </h3>
+                    </div>
+                    <div class="p-8 space-y-4">
+                        <div class="flex items-start gap-4">
+                            <i data-lucide="map-pin" class="h-5 w-5 text-blue-600 mt-1 shrink-0"></i>
+                            <p class="text-slate-600">
+                                99VH+FJ3 Neknampur Road, Alkapoor Twp Main Rd, Secretariat Employees Colony, Manikonda,
+                                Hyderabad, Telangana 500089
+                            </p>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <i data-lucide="clock" class="h-5 w-5 text-blue-600 mt-1 shrink-0"></i>
+                            <div>
+                                <p class="font-semibold text-slate-900">Consultation Hours:</p>
+                                <p class="text-slate-600">Mon - Sat: 05:30 PM - 09:30 PM</p>
+                            </div>
+                        </div>
+                        <a href="https://maps.app.goo.gl/ULakSdFB7i8djmX1A" target="_blank"
+                            class="block w-full text-center py-2 px-4 border border-blue-600 text-blue-600 rounded-lg hover:bg-blue-50 transition-colors mt-4 text-sm font-medium">
+                            Get Directions
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+            <div class="mt-12 flex justify-center">
+                <a href="https://wa.me/7093085231?text=Hello,%20I%20would%20like%20to%20schedule%20an%20appointment%20with%20Sr.%20Consultant%20Pavan%20Kumar%20Ediga."
+                    target="_blank"
+                    class="group relative flex items-center gap-4 px-8 py-4 bg-red-600 text-white rounded-2xl shadow-xl shadow-red-200 border-2 border-red-500 transition-transform hover:scale-105 active:scale-95 animate-[heartbeat_1.5s_ease-in-out_infinite]">
+
+                    <!-- White Circle Icon -->
+                    <div class="bg-white p-2 rounded-full shadow-inner">
+                        <i data-lucide="message-circle" class="h-6 w-6 text-red-600"></i>
+                    </div>
+
+                    <div class="text-left">
+                        <p class="text-xs uppercase tracking-[0.2em] font-bold opacity-90 leading-none mb-1">
+                            Emergency Support
+                        </p>
+                        <p class="text-lg md:text-xl font-black italic tracking-tight">
+                            Available 24/7 on WhatsApp
                         </p>
                     </div>
-                    <div class="flex items-start gap-4">
-                        <i data-lucide="clock" class="h-5 w-5 text-blue-600 mt-1 shrink-0"></i>
-                        <div>
-                            <p class="font-semibold text-slate-900">Consultation Hours:</p>
-                            <p class="text-slate-600">Mon - Sat: 05:30 PM - 09:30 PM</p>
-                        </div>
-                    </div>
-                    <a href="https://maps.app.goo.gl/ULakSdFB7i8djmX1A" target="_blank"
-                        class="block w-full text-center py-2 px-4 border border-blue-600 text-blue-600 rounded-lg hover:bg-blue-50 transition-colors mt-4 text-sm font-medium">
-                        Get Directions
-                    </a>
-                </div>
+                </a>
             </div>
-
         </div>
-    </div>
-</section>
+    </section>
 
     <!-- Testimonials Section -->
     <section class="py-20 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 class="text-3xl font-bold text-center text-slate-900 mb-12">Patient Stories</h2>
             <div class="grid md:grid-cols-3 gap-8">
-                <a href="https://share.google/nwIuimuyXE6vU9MxJ" target="_blank" rel="noopener noreferrer" class="bg-slate-50 p-6 rounded-2xl border border-slate-100 block hover:shadow-lg hover:border-slate-300 transition-all duration-200 cursor-pointer">
+                <a href="https://share.google/nwIuimuyXE6vU9MxJ" target="_blank" rel="noopener noreferrer"
+                    class="bg-slate-50 p-6 rounded-2xl border border-slate-100 block hover:shadow-lg hover:border-slate-300 transition-all duration-200 cursor-pointer">
                     <div class="flex text-yellow-400 mb-4">
                         <i data-lucide="star" class="h-4 w-4 fill-current"></i>
                         <i data-lucide="star" class="h-4 w-4 fill-current"></i>
@@ -885,15 +1031,17 @@
                     </div>
                     <p class="text-slate-600 italic mb-4">"Very first Thanks to you Sir Dr. Pavan Kumar.
 
-Thanks for the Team Continental Hospital.
-It's a place where you can confidently leave your worries.
-I'm thankful to the Dr. Pavan Kumar Sir who did my surgery successfully and never let me feel any kind of stress during my stay.
-Really Great.
-Highly Confident and well knowledge.
-Thank you so much for your support and care Sir."</p>
+                        Thanks for the Team Continental Hospital.
+                        It's a place where you can confidently leave your worries.
+                        I'm thankful to the Dr. Pavan Kumar Sir who did my surgery successfully and never let me feel
+                        any kind of stress during my stay.
+                        Really Great.
+                        Highly Confident and well knowledge.
+                        Thank you so much for your support and care Sir."</p>
                     <p class="font-bold text-slate-900">- Subhash Mishra</p>
                 </a>
-                <a href="https://share.google/9mRQurzY6aXDX8sNz" target="_blank" rel="noopener noreferrer" class="bg-slate-50 p-6 rounded-2xl border border-slate-100 block hover:shadow-lg hover:border-slate-300 transition-all duration-200 cursor-pointer">
+                <a href="https://share.google/9mRQurzY6aXDX8sNz" target="_blank" rel="noopener noreferrer"
+                    class="bg-slate-50 p-6 rounded-2xl border border-slate-100 block hover:shadow-lg hover:border-slate-300 transition-all duration-200 cursor-pointer">
                     <div class="flex text-yellow-400 mb-4">
                         <i data-lucide="star" class="h-4 w-4 fill-current"></i>
                         <i data-lucide="star" class="h-4 w-4 fill-current"></i>
@@ -901,14 +1049,21 @@ Thank you so much for your support and care Sir."</p>
                         <i data-lucide="star" class="h-4 w-4 fill-current"></i>
                         <i data-lucide="star" class="h-4 w-4 fill-current"></i>
                     </div>
-                    <p class="text-slate-600 italic mb-4">"I would like to express my sincere gratitude to Dr. Pavan Kumar Ediga for the excellent treatment and care he provided to my father during his recovery from a brain stroke. His medical expertise, timely intervention, and patient-focused approach made a huge difference in my father's health.
+                    <p class="text-slate-600 italic mb-4">"I would like to express my sincere gratitude to Dr. Pavan
+                        Kumar Ediga for the excellent treatment and care he provided to my father during his recovery
+                        from a brain stroke. His medical expertise, timely intervention, and patient-focused approach
+                        made a huge difference in my father's health.
 
-What stood out the most was not only his treatment but also his consistent follow-up and guidance, which gave us confidence throughout the recovery journey. Dr. Pavan Kumar Ediga is approachable, compassionate, and highly professional.
+                        What stood out the most was not only his treatment but also his consistent follow-up and
+                        guidance, which gave us confidence throughout the recovery journey. Dr. Pavan Kumar Ediga is
+                        approachable, compassionate, and highly professional.
 
-We are truly thankful for his support and would strongly recommend him to anyone in need of neurological care."</p>
+                        We are truly thankful for his support and would strongly recommend him to anyone in need of
+                        neurological care."</p>
                     <p class="font-bold text-slate-900">- Ram Reddy Yerrabotu </p>
                 </a>
-                <a href="https://share.google/DzHVjOZPqMAUQ3VcM" target="_blank" rel="noopener noreferrer" class="bg-slate-50 p-6 rounded-2xl border border-slate-100 block hover:shadow-lg hover:border-slate-300 transition-all duration-200 cursor-pointer">
+                <a href="https://share.google/DzHVjOZPqMAUQ3VcM" target="_blank" rel="noopener noreferrer"
+                    class="bg-slate-50 p-6 rounded-2xl border border-slate-100 block hover:shadow-lg hover:border-slate-300 transition-all duration-200 cursor-pointer">
                     <div class="flex text-yellow-400 mb-4">
                         <i data-lucide="star" class="h-4 w-4 fill-current"></i>
                         <i data-lucide="star" class="h-4 w-4 fill-current"></i>
@@ -916,7 +1071,13 @@ We are truly thankful for his support and would strongly recommend him to anyone
                         <i data-lucide="star" class="h-4 w-4 fill-current"></i>
                         <i data-lucide="star" class="h-4 w-4 fill-current"></i>
                     </div>
-                    <p class="text-slate-600 italic mb-4">"had a great experience with Dr. Pavankumar E. From the moment I arrived, I felt well taken care of. Dr. Pavankumar was very thorough in explaining condition and the treatment options, which helped me feel more informed and confident. They listened attentively to my concerns and answered all of my questions in a way that was easy to understand. The appointment was timely, and I didn't feel rushed at all. I appreciate the compassionate and professional approach for treatment. I would highly recommend Dr.pavankumar to anyone seeking a neurosurgeon .👍"</p>
+                    <p class="text-slate-600 italic mb-4">"had a great experience with Dr. Pavankumar E. From the moment
+                        I arrived, I felt well taken care of. Dr. Pavankumar was very thorough in explaining condition
+                        and the treatment options, which helped me feel more informed and confident. They listened
+                        attentively to my concerns and answered all of my questions in a way that was easy to
+                        understand. The appointment was timely, and I didn't feel rushed at all. I appreciate the
+                        compassionate and professional approach for treatment. I would highly recommend Dr.pavankumar to
+                        anyone seeking a neurosurgeon .👍"</p>
                     <p class="font-bold text-slate-900">- Madhuri a.n.a</p>
                 </a>
             </div>
@@ -935,33 +1096,38 @@ We are truly thankful for his support and would strongly recommend him to anyone
                     style="background-image: url('data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'none\' fill-rule=\'evenodd\'%3E%3Cg fill=\'%23000000\' fill-opacity=\'1\'%3E%3Cpath d=\'M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');">
                 </div>
 
-                <div class="business-card-content relative z-10 h-full flex flex-col md:flex-row p-8 items-center gap-8">
-                    <div class="business-card-logo w-full md:w-5/12 flex flex-col items-center justify-center border-b md:border-b-0 md:border-r border-slate-200 pb-6 md:pb-0 md:pr-6">
+                <div
+                    class="business-card-content relative z-10 h-full flex flex-col md:flex-row p-8 items-center gap-8">
+                    <div
+                        class="business-card-logo w-full md:w-5/12 flex flex-col items-center justify-center border-b md:border-b-0 md:border-r border-slate-200 pb-6 md:pb-0 md:pr-6">
                         <img src="photos/medicover1.png" alt="Continental Hospitals Logo"
                             class="w-40 md:w-48 object-contain mb-4 filter contrast-125">
                     </div>
                     <div class="w-full md:w-7/12 text-center md:text-right space-y-1">
                         <h3 class="text-2xl font-bold text-teal-700 font-serif">Dr E Pavan Kumar</h3>
-                        <p class="text-xs text-slate-500 font-semibold uppercase tracking-wider mb-2">MBBS, MS, MCh (Neuro Surgery)</p>
+                        <p class="text-xs text-slate-500 font-semibold uppercase tracking-wider mb-2">MBBS, MS, MCh
+                            (Neuro Surgery)</p>
                         <p class="text-sm font-semibold text-slate-800">Consultant</p>
                         <p class="text-xs text-slate-600 mb-4">Dept. of Neuro surgery</p>
                         <p class="text-xs text-slate-600 mb-4">Brain & Spine surgeron</p>
-                        <div class="text-[10px] sm:text-xs text-slate-500 space-y-1 mt-4 border-t border-slate-100 pt-3">
+                        <div
+                            class="text-[10px] sm:text-xs text-slate-500 space-y-1 mt-4 border-t border-slate-100 pt-3">
                             <p class="flex items-center justify-center md:justify-end gap-2">
                                 <i data-lucide="phone" class="h-3 w-3 text-teal-600"></i>
                                 +91 70930 85231
                             </p>
                             <p class="flex items-center justify-center md:justify-end gap-2">
                                 <i data-lucide="phone" class="h-3 w-3 text-teal-600"></i>
-                                +91 04068334455
+                                +91 9160850650
                             </p>
                             <p class="flex items-center justify-center md:justify-end gap-2">
                                 <i data-lucide="mail" class="h-3 w-3 text-teal-600"></i>
                                 dr.pavankumar7759@gmail.com
                             </p>
                             <p class="flex items-center justify-center md:justify-end gap-2 mt-2">
-                                
-                                <span class="max-w-[200px] text-right">322, Myscape Rd, Financial District, Nanakramguda, Hyderabad, Telangana 500032</span>
+
+                                <span class="max-w-[200px] text-right">322, Myscape Rd, Financial District,
+                                    Nanakramguda, Hyderabad, Telangana 500032</span>
                             </p>
                         </div>
                     </div>
@@ -990,7 +1156,8 @@ We are truly thankful for his support and would strongly recommend him to anyone
                     <i data-lucide="calendar" class="mr-2 h-5 w-5"></i>
                     Request Appointment
                 </button> -->
-                <a href="https://wa.me/7093085231?text=Hello, I would like to schedule an appointment with Sr. Consultant Pavan Kumar Ediga." target="_blank"
+                <a href="https://wa.me/7093085231?text=Hello, I would like to schedule an appointment with Sr. Consultant Pavan Kumar Ediga."
+                    target="_blank"
                     class="inline-flex items-center justify-center px-8 py-4 bg-white text-blue-600 font-bold rounded-lg hover:bg-slate-50 transition-all shadow-lg">
                     <i data-lucide="message-circle" class="mr-2 h-5 w-5"></i>
                     Whatsapp
@@ -1029,7 +1196,10 @@ We are truly thankful for his support and would strongly recommend him to anyone
                 </div>
             </div>
             <div class="border-t border-slate-800 pt-8 text-center text-xs">
-                <p>&copy; <script>document.write(new Date().getFullYear())</script> Dr. Pavan Kumar Ediga. All rights reserved.</p>
+                <p>&copy;
+                    <script>document.write(new Date().getFullYear())</script> Dr. Pavan Kumar Ediga. All rights
+                    reserved.
+                </p>
             </div>
         </div>
     </footer>
@@ -1059,7 +1229,8 @@ We are truly thankful for his support and would strongly recommend him to anyone
                 </div>
                 <div>
                     <label class="block text-sm font-medium text-slate-700 mb-1">Preferred Location</label>
-                    <select class="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all">
+                    <select
+                        class="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all">
                         <option>Continental Hospitals, Gachibowli</option>
                     </select>
                 </div>
